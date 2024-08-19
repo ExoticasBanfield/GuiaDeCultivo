@@ -1,11 +1,16 @@
 :root{
-    --primario : green;
-    --secundario: #8aa04f;
-    --terciario:#f8f9fa
-    ;
+    --primario : #33691e;
+    --secundario: #bcf46c;
+    --terciario:#f8f9fa;
+    
 }
 body{
-    border: 1px solid violet;
+    
+    margin: 0;
+}
+body p,body h4{
+    color: #33691e;
+    font-size: 1.2em;
 }
 
 .main .header{
@@ -14,52 +19,238 @@ body{
     justify-content: space-between;
     background-color: var(--primario);
 }
+/*Link inicio header*/
+.main .header .inicio a{
+list-style: none;
+text-decoration: none;
+color: var(--terciario);
+margin-left: 1em;
+font-size: 1.1em;
+}
+/**/
+/*Barra navegacion*/
 .main .header nav ul{
+    list-style: none;
+    color:var(--terciario);
     display: flex;
     gap: 2em;
     justify-content: flex-start;
 }
-.main #dionaea,#inicioEspecie,#stylidium,#sarracenia,#pinguicula,#nepenthes,#utricularia{
+/*Ocultar secciones de especie*/
+.main #dionaea,#brocchinia,#drosera,#stylidium,#sarracenia,#pinguicula,#nepenthes,#utricularia{
     display: none;
     
 }
-
+/*Seccion de texto principal h1 y h3 en div .titulo*/
+.main .seccionPrincipal .titulo {
+    text-align: center;
+    color: var(--primario);
+    
+}
+.main .seccionPrincipal .titulo h1{
+    margin-bottom: 0;
+}
+.main .seccionPrincipal .titulo h3{
+    margin-top: 0;
+}
+/**/
+/*Botones de especies*/
+.main .seccionPrincipal .Especies{
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+  
+}
+.main .Especies .especieButon{
+    margin : 0.2em 0.1em;
+    padding:0;
+    width: 90px;
+    height: 90px;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em #33691e;
+    border: 2px solid var(--primario);
+   
+    
+}
+.main .Especies .especieButon div{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--terciario); 
+    border-radius: 0.2em;
+}
+.main .Especies .especieButon div p{
+   width: 100%;
+   max-height: 20px;
+   padding: 0;
+   padding-bottom: 0.1em;
+   margin: 0;
+   font-size: 0.9em;
+  
+}
+.main .Especies .especieButon img{
+    margin: 0;
+    padding: 0;
+     width: 80px;
+     height: 70%;
+     margin-bottom: 0;
+}
 /* seccion class = especie  contenedora de divs cuidados*/
 .main .especie {
+    margin-left: 15em;
+    margin-right: 15em;
+    border-radius: 0.4em;
+    padding-bottom: 1em;
+    margin-bottom:1em ;
+    background-color: var(--primario);
+}
+/*div contenedor de texto y fotos*/
+.main  .especie .contenedorEspecie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     
-    border-radius: 0.2em;
-    background-color: var(--secundario);
+} 
+/*Modifica el div #inicioEspecie*/
+.main #inicioEspecie {
+    
+    padding-top: 0.1em;
 }
-/*div de fotos*/
-
-.main .especie #fotos ul li img{
-    width: 30px;
-    height: 30px;
+.main #inicioEspecie h1,.main #inicioEspecie p{
+    text-align: center;
+    color: var(--terciario);
 }
-.main .especie #fotos ul{
+/**/
+/*     .datos especie contienen todo el texto de cuidados       */
+.main .especie .contenedorEspecie .datosEspecie {
+padding-bottom: 0.2em;
+}
+/*div contenedor de fotos*/
+/*.imagenesEspecie*/
+.main .especie .contenedorEspecie .imagenesEspecie{
+    
+    height: auto;
+}
+.main .especie .contenedorEspecie .imagenesEspecie ul {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+    width: 300px;
+   padding: 0.5em 0.5em;
+}
+.main .especie .contenedorEspecie .imagenesEspecie ul li{
+    width: 100%;
+    max-height: 400px;
+    height: 400px;
+   color: var(--terciario);
+   list-style: none;
+   margin-bottom: 2em;
+   text-align: center;
+  
+}
+/*imagenes de .imagenesEspecie*/
+.main .especie .contenedorEspecie .imagenesEspecie ul li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+}
+/**/
+/*div de link de inicio ExoticasBanfield*/
+.main .especie #inicio ul{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 
 }
+/*Div de fotos muestra de .especie*/
+.main .especie #fotosGuia {
+  
+    padding: 0;
+}
+.main .especie #fotosGuia ul {
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+   padding: 1em;
+}
+.main .especie #fotosGuia ul li{
+    width :30%;
+    height: 30%;
+    
+}
+/*img de .especie*/
+.main .especie #fotosGuia ul li img{
+    border-radius: 1em;
+width: 100%;
+}
 /*div de cada modulo*/
 .main .especie .cuidados{
-    border-radius: 0.3em ;
+    border-radius: 0.5em ;
     background-color: var(--terciario);
    padding-bottom: 1em;
+   margin:0  0.5em;
+   margin-bottom: 0;
 }
 /*Titulo Nombre de la especie */
 .main .especie h2{
-    margin-left: 0.2em;;
+    margin-left: 0.2em;
+    color: var(--terciario);
+    padding-top: 0.5em;
+    text-align: center;
 }
 /* Titulos de cada div cuidados*/
 .main .especie h4{
+    
+    color: var(--primario);
     text-align: center;
     margin-bottom: 0.2em;
-    border: 1px solid blue;
+    border-bottom: 1px solid var(--primario);
 }
 /*Texto de cada div cuidado*/
 .main .especie p{
     margin: 0em 1em 0em 1em;
+}
+@media(max-width:1300px){
+    .main .especie{
+         margin:0 10em;
+    }
+    }
+@media(max-width:1250px){
+    .main .especie{
+         margin:0 8em;
+    }
+    }
+@media(max-width:1100px){
+.main .especie{
+     margin:0 5em;
+}
+}
+
+@media(max-width:980px){
+    .main .especie {
+      margin:0em 1em;
+    
+    }
+    .main .especie .contenedorEspecie{
+     display: block;
+    }
+    .main .especie .contenedorEspecie .imagenesEspecie {
+     align-items: center;
+    }
+    .main .especie .contenedorEspecie .imagenesEspecie ul {
+      /*  display: flex;
+   flex-wrap: wrap/*;*/
+   align-items: center;
+    width: 100%;
+   padding: 0.5em 0em;  
+    }
+    .main .especie .contenedorEspecie .imagenesEspecie ul li{
+        width: 200px;
+        height: 300px;    
+    }
 }
