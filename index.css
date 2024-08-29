@@ -4,77 +4,112 @@
     --terciario:#f8f9fa;
     
 }
-body{
-    
+body{ 
     margin: 0;
 }
-body p,body h4{
-    color: #33691e;
-    font-size: 1.2em;
-}
 
-.main .header{
+/*------HEADER-------*/
+.contenedor .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--primario);
 }
 /*Link inicio header*/
-.main .header .inicio a{
+/* <a> exoticas*/
+.contenedor .header .inicio a{
 list-style: none;
 text-decoration: none;
 color: var(--terciario);
 margin-left: 1em;
-font-size: 1.1em;
+font-size: 1.8em;
 }
 /**/
-/*Barra navegacion*/
-.main .header nav ul{
+/*-------Barra navegacion-------*/
+.contenedor .header nav ul{
     list-style: none;
     color:var(--terciario);
     display: flex;
     gap: 2em;
     justify-content: flex-start;
 }
-/*Ocultar secciones de especie*/
-.main #dionaea,#brocchinia,#drosera,#stylidium,#sarracenia,#pinguicula,#nepenthes,#utricularia{
+/*-----Ocultar secciones de especie--------*/
+.main #dionaea,#drosera,#stylidium,#sarracenia,#pinguicula,#nepenthes,#utricularia{
     display: none;
     
 }
 /*Seccion de texto principal h1 y h3 en div .titulo*/
+.main{
+    border: 2px solid red;
+}
+.main .seccionPrincipal {
+    display: block;
+    border: 2px solid BLUE;
+    align-items: center;
+    justify-content: center;
+   
+}
+
 .main .seccionPrincipal .titulo {
     text-align: center;
     color: var(--primario);
+    border: 1px solid black;
+    width: 100%;
     
 }
 .main .seccionPrincipal .titulo h1{
     margin-bottom: 0;
+    font-size: 2em;
 }
 .main .seccionPrincipal .titulo h3{
     margin-top: 0;
+    font-size: 1.5em;
 }
+/*-----------CAROUSEL ESPECIES*/
+.seccionPrincipal #carouselEspecies{
+    max-height: 240px;
+    border: 2px solid green;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.seccionPrincipal #carouselEspecies .carousel-item {
+    border: 2px solid red;
+    height:100%;
+    width: 200px;
+    margin:0;
+
+   
+ }
+.seccionPrincipal #carouselEspecies .carousel-item img{
+   border: 2px solid red;
+   height: 70%;
+   width: 100%;
+}
+
 /**/
-/*Botones de especies*/
+/*------------Botones de especies--------*/
+
 .main .seccionPrincipal .Especies{
-    display: flex;
-    flex-wrap: wrap;
+   
+    border: 1px solid blue;
     
+   
+    align-items: center;
     justify-content: center;
   
-}
-.main .Especies .especieButon{
-    margin : 0.2em 0.1em;
-    padding:0;
-    width: 90px;
-    height: 90px;
-    border-radius: 0.3em;
-    box-shadow: 0 0 0.5em #33691e;
-    border: 2px solid var(--primario);
    
     
 }
-.main .Especies .especieButon div{
-    display: block;
+.especieButon{
+    border-radius: 0.3em;
+   box-shadow: 0 0 0.5em #33691e;
+   border: 2px solid var(--primario);
+    width: 100%;
+    height: 100%;
+}
+.especieButon div{
+    
     margin: 0;
     padding: 0;
     width: 100%;
@@ -82,44 +117,44 @@ font-size: 1.1em;
     background-color: var(--terciario); 
     border-radius: 0.2em;
 }
-.main .Especies .especieButon div p{
+.especieButon div p{
    width: 100%;
-   max-height: 20px;
+   height: 10%;
    padding: 0;
    padding-bottom: 0.1em;
    margin: 0;
-   font-size: 0.9em;
+   font-size: 1em;
+   margin-bottom: 0;
   
 }
-.main .Especies .especieButon img{
+.especieButon img{
     margin: 0;
     padding: 0;
-     width: 80px;
-     height: 70%;
+     width: 100%;
+     height: 80%;
      margin-bottom: 0;
 }
 /* seccion class = especie  contenedora de divs cuidados*/
 .main .especie {
-    margin-left: 15em;
-    margin-right: 15em;
+    padding-left: 15em;
+    padding-right: 15em;
     border-radius: 0.4em;
     padding-bottom: 1em;
     margin-bottom:1em ;
     background-color: var(--primario);
+    border: 2px solid VIOLET;
+    
 }
 /*div contenedor de texto y fotos*/
 .main  .especie .contenedorEspecie {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
+    display: flex; 
+  
 } 
 /*Modifica el div #inicioEspecie*/
 .main #inicioEspecie {
-    
     padding-top: 0.1em;
 }
-.main #inicioEspecie h1,.main #inicioEspecie p{
+.main #inicioEspecie h1,.main #inicioEspecie h3{
     text-align: center;
     color: var(--terciario);
 }
@@ -210,57 +245,10 @@ width: 100%;
     text-align: center;
     margin-bottom: 0.2em;
     border-bottom: 1px solid var(--primario);
+    font-size: 1.6em;
 }
 /*Texto de cada div cuidado*/
 .main .especie p{
     margin: 0em 1em 0em 1em;
-}
-@media(max-width:1300px){
-    .main .especie{
-         margin:0 10em;
-    }
-    }
-@media(max-width:1250px){
-    .main .especie{
-         margin:0 8em;
-    }
-    }
-@media(max-width:1100px){
-.main .especie{
-     margin:0 5em;
-}
-}
-
-@media(max-width:980px){
-    body{
-        font-size: 1.5em;
-    }
-    .main .especie {
-      margin:0em 1em;
-    
-    }
-    .seccionPrincipal .Especies .especieButon {
-        width: 100px;
-        height: 100px;
-       font-size: 0.8em;
-        
-        }
-    
-    .main .especie .contenedorEspecie{
-     display: block;
-    }
-    .main .especie .contenedorEspecie .imagenesEspecie {
-     align-items: center;
-    }
-    .main .especie .contenedorEspecie .imagenesEspecie ul {
-     
-  flex-direction:column ;
-   align-items: center;
-    width: 100%;
-   padding: 0.0em 0em;  
-    }
-    .main .especie .contenedorEspecie .imagenesEspecie ul li{
-        width: 90%;
-        height: 500px;    
-    }
+    font-size: 1.5em;
 }

@@ -5,34 +5,91 @@
     <meta charset="UTF-8">
     <title>Guia de Cultivo de Plantas Carnivoras</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 </head>
 
 <body>
     <div class="contenedor">
-        <main class="main">
-            <header class="header">
-                <div class="inicio">
-                    <a href="index.html">Exoticas Banfield</a>
-                </div>
-                <nav>
-                    <ul>
-                        <!--<li><a href="index.html">Guia de Cultivo</a></li>
+        <header class="header">
+            <div class="inicio">
+                <a href="index.html">Exoticas Banfield</a>
+            </div>
+            <nav>
+                <ul>
+                    <!--<li><a href="index.html">Guia de Cultivo</a></li>
                         <li>Guia de Siembra</li>
                         <li><a href="ListaEspecies/lista.html">Lista</a></li>
                         -->
 
-                    </ul>
-                </nav>
-            </header>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main class="main">
+
             <!--Seccion con botones-->
             <section class="seccionPrincipal">
                 <div class="titulo">
                     <h1>Bienvenidos a la guia de Cultivo Basica</h1>
                     <h3>Busca sus Cuidados por Especie</h3>
                 </div>
-
+                <div class="carousel " id="carouselEspecies">
+                    <a class="carousel-item" href="#one!"><button onclick="guia('brocchinia')" class="especieButon"
+                            id="butonEspecie">
+                            <div><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="">
+                                <p>Brocchinia</p>
+                            </div>
+                        </button></a>
+                    <a class="carousel-item" href="#two!"><button onclick="guia('dionaea')" class="especieButon"
+                            id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/venus.png" alt="">
+                                <p>Dionaea</p>
+                            </div>
+                        </button></a>
+                    <a class="carousel-item" href="#three!">
+                        <button onclick="guia('drosera')" class="especieButon" id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/drosera.png" alt="">
+                                <p>Drosera</p>
+                            </div>
+                        </button>
+                    </a>
+                    <a class="carousel-item" href="#four!">
+                        <button onclick="guia('nepenthes')" class="especieButon" id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/nepenthes.png" alt="">
+                                <p>Nepenthes</p>
+                            </div>
+                        </button>
+                    </a>
+                    <a class="carousel-item" href="#five!"><button onclick="guia('pinguicula')" class="especieButon"
+                            id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/pinguicula.png" alt="">
+                                <p>Pinguicula</p>
+                            </div>
+                        </button></a>
+                    <a class="carousel-item" href="#five!"><button onclick="guia('sarracenia')" class="especieButon"
+                            id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/sarracenia.png" alt="">
+                                <p>Sarracenia</p>
+                            </div>
+                        </button></a>
+                    <a class="carousel-item" href="#five!"><button onclick="guia('stylidium')" class="especieButon"
+                            id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/stylidium.png" alt="">
+                                <p>Stylidium</p>
+                            </div>
+                        </button></a>
+                    <a class="carousel-item" href="#five!"><button onclick="guia('utricularia')" class="especieButon"
+                            id="butonEspecie">
+                            <div><img src="Imagenes/iconos/plantas/utricularia.png" alt="">
+                                <p>Utricularia</p>
+                            </div>
+                        </button>></a>
+                </div>
+                <!--
                 <article class="Especies">
+
                     <button onclick="guia('brocchinia')" class="especieButon" id="butonEspecie">
                         <div><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="">
                             <p>Brocchinia</p>
@@ -76,13 +133,16 @@
 
 
                 </article>
-
+                 -->
             </section>
+            <!---->
+
+            <!---->
             <section class="especie" id="inicioEspecie">
                 <div>
                     <h1>Informate sobre los cuidados basicos de cada planta carnivora</h1>
-                    <p>Esta es una guia basica con cuidados generales para cada especie</p>
-  
+                    <h3>Esta es una guia basica con cuidados generales para cada especie</h3>
+
                 </div>
 
             </section>
@@ -1285,6 +1345,7 @@
         </main>
     </div>
     <!---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="index.js"></script>
 </body>

@@ -1,3 +1,16 @@
+
+ document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems,{
+  fullWidth:false,
+  numVisible:5,
+  dist:0,
+  nowrap:false,
+ shift:0,
+ padding:0
+});
+});
+
 function guia(dato) {
   
   var datoEspecie = dato.toLowerCase();
@@ -26,4 +39,5 @@ function cerrarSecciones() {
     seccion.style.display = 'none';
   });
 }
+
 
