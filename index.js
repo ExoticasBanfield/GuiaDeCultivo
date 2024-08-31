@@ -18,6 +18,29 @@ function desplegarEspecies(){
     especies.style.display="none";
   }
 }
+/** */
+function guia2(dato){ 
+  var datoEspecie = dato.toLowerCase();
+  var nuevoDato = document.getElementById(datoEspecie);
+  
+  
+    if (nuevoDato.style.display === "none" || nuevoDato.style.display === "") {
+      cerrarSecciones();
+      nuevoDato.style.display = "block";
+      setTimeout(function() {
+        nuevoDato.scrollIntoView({ behavior: 'smooth' }); 
+        const offset = 42; // Ajusta este valor según el espacio adicional deseado
+        window.scrollBy(0, -offset); // Desplaza la ventana hacia arriba
+    }, 400); // Espera un poco para asegurar que scrollIntoView se complete
+     
+  } else {
+      cerrarSecciones();
+      abrirTextoInicio();
+    }
+   
+desplegarEspecies();
+}
+/** */
 function guia(dato) {
   
   var datoEspecie = dato.toLowerCase();
@@ -27,11 +50,11 @@ function guia(dato) {
     if (nuevoDato.style.display === "none" || nuevoDato.style.display === "") {
       cerrarSecciones();
       nuevoDato.style.display = "block";
-      desplegarEspecies()
-    } else {
+  } else {
       cerrarSecciones();
       abrirTextoInicio();
     }
+   
   }
 
 

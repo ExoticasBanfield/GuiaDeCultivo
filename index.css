@@ -61,17 +61,18 @@ color: var(--terciario);
 .contenedor .header #desplegable {
 display: none;
 position: fixed;
-justify-content: space-around;
+justify-content: space-between;
 left: 0;
-top: 0;
+top: 8.5%;
 background-color: var(--primario);
-width: 150px;
-height: 100%;
+width: 100px;
+height: 91.5vh;
 padding: 0.3em;
+
 }
 .contenedor .header #desplegable .especieButon{
     width: 100%;
-    height: 150px;
+    height: 11.3%;
     margin: 0.2em 0em;
     padding: 0;
 }
@@ -90,7 +91,7 @@ padding: 0.3em;
 .contenedor .header #desplegable .especieButon div p{
     width: 100%;
     max-height: 30%;
-    font-size: 1.7em;
+    font-size: 1.1em;
     padding: 0.22em 0em;
     margin: 0;
     background-color: var(--secundario);
@@ -264,7 +265,7 @@ padding: 0.3em;
 /*-------Div imagenesEspecie : contenedor fotos (ul,li)----------------------*/
 /*.imagenesEspecie*/
 .main .especie .contenedorEspecie .imagenesEspecie {
-    height: auto;
+    height: 100%;
 }
 
 /*----- ul---- */
@@ -273,15 +274,14 @@ padding: 0.3em;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    width: 300px;
+    width: 350px;
     padding: 0.5em 0.5em;
 }
 
 /*-------- li --------*/
 .main .especie .contenedorEspecie .imagenesEspecie ul li {
-    width: 100%;
-    
-    height: 100%;
+    width: 100%; 
+    height: 400px;
     color: var(--terciario);
     list-style: none;
     margin-bottom: 2em;
@@ -318,7 +318,11 @@ padding: 0.3em;
     font-size: 2.2em;
     padding-bottom: 1em;
 }
-
+/*-------------------     Footer: contenedor/page-footer  ----------------------*/
+.contenedor .page-footer{
+    background-color: var(--primario
+    );
+}
 /**/
 
 @media(max-width:1300px) {
