@@ -3,7 +3,7 @@
   var elems = document.querySelectorAll('.carousel');
   var instances = M.Carousel.init(elems,{
   fullWidth:false,
-  numVisible:5,
+  numVisible:7,
   dist:0,
   nowrap:false,
  shift:0,

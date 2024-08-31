@@ -1,254 +1,309 @@
-:root{
-    --primario : #33691e;
+:root {
+    --primario: #33691e;
     --secundario: #bcf46c;
-    --terciario:#f8f9fa;
-    
+    --terciario: #f8f9fa;
+
 }
-body{ 
+
+body {
     margin: 0;
 }
 
 /*------HEADER-------*/
-.contenedor .header{
+.contenedor .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--primario);
 }
+
 /*Link inicio header*/
 /* <a> exoticas*/
-.contenedor .header .inicio a{
-list-style: none;
-text-decoration: none;
-color: var(--terciario);
-margin-left: 1em;
-font-size: 1.8em;
+.contenedor .header .inicio a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--terciario);
+    margin-left: 1em;
+    font-size: 1.8em;
 }
+
 /**/
 /*-------Barra navegacion-------*/
-.contenedor .header nav ul{
+.contenedor .header nav ul {
     list-style: none;
-    color:var(--terciario);
+    color: var(--terciario);
     display: flex;
     gap: 2em;
     justify-content: flex-start;
 }
+
 /*-----Ocultar secciones de especie--------*/
-.main #dionaea,#drosera,#stylidium,#sarracenia,#pinguicula,#nepenthes,#utricularia{
+.main #dionaea,
+#drosera,
+#stylidium,
+#sarracenia,
+#pinguicula,
+#nepenthes,
+#utricularia {
     display: none;
-    
-}
-/*Seccion de texto principal h1 y h3 en div .titulo*/
-.main{
-    border: 2px solid red;
-}
-.main .seccionPrincipal {
-    display: block;
-    border: 2px solid BLUE;
-    align-items: center;
-    justify-content: center;
-   
+
 }
 
+/*Seccion de texto principal h1 y h3 en div .titulo*/
+
+
+/*---------.seccionPrincipal : texto de bienvenida-----------------*/
+/*---- .seccionPrincipal -----*/
+.main .seccionPrincipal {
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*-------- .titulo  : principal---------*/
 .main .seccionPrincipal .titulo {
     text-align: center;
     color: var(--primario);
-    border: 1px solid black;
     width: 100%;
-    
+
 }
-.main .seccionPrincipal .titulo h1{
+
+/*---- .h1 -----*/
+.main .seccionPrincipal .titulo h1 {
     margin-bottom: 0;
-    font-size: 2em;
+    font-size: 3em;
 }
-.main .seccionPrincipal .titulo h3{
+
+/*---- .h3 -----*/
+.main .seccionPrincipal .titulo h3 {
     margin-top: 0;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
-/*-----------CAROUSEL ESPECIES*/
-.seccionPrincipal #carouselEspecies{
-    max-height: 240px;
-    border: 2px solid green;
+
+/*---- fin -----*/
+/*-----------CAROUSEL ESPECIES ----------------*/
+.seccionPrincipal #carouselEspecies {
+    height: 200px;
     align-items: center;
     justify-content: center;
- 
+    margin: 0em;
+
 }
+
+/*----------- .carousel-item ----------------*/
 .seccionPrincipal #carouselEspecies .carousel-item {
-    border: 2px solid red;
-    height:100%;
-    width: 200px;
-    margin:0;
-
-   
- }
-.seccionPrincipal #carouselEspecies .carousel-item img{
-   border: 2px solid red;
-   height: 70%;
-   width: 100%;
+    height: 100%;
+    width: 180px;
+    padding: 0.5em;
 }
 
-/**/
-/*------------Botones de especies--------*/
-
-.main .seccionPrincipal .Especies{
-   
-    border: 1px solid blue;
-    
-   
-    align-items: center;
-    justify-content: center;
-  
-   
-    
-}
-.especieButon{
+/*------------Botones de especies de carousel--------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon {
     border-radius: 0.3em;
-   box-shadow: 0 0 0.5em #33691e;
-   border: 2px solid var(--primario);
+    box-shadow: 0 0 0.5em #33691e;
+    border: 2px solid var(--primario);
     width: 100%;
     height: 100%;
+    padding: 0em;
 }
-.especieButon div{
-    
+
+/*----------- div ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon div {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--terciario); 
+    background-color: white;
     border-radius: 0.2em;
 }
-.especieButon div p{
-   width: 100%;
-   height: 10%;
-   padding: 0;
-   padding-bottom: 0.1em;
-   margin: 0;
-   font-size: 1em;
-   margin-bottom: 0;
-  
+
+/*----------- img ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon img {
+    height: 80%;
+    width: 100%;
+    background-color: white;
 }
-.especieButon img{
+
+/*----------- p : texto del boton ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon div p {
+    width: 100%;
+    height: auto;
+    background-color:var(--secundario);
+    border-radius: 0.2em;
+    padding-top: 0em;
+    padding-bottom: 0.18em;
     margin: 0;
-    padding: 0;
-     width: 100%;
-     height: 80%;
-     margin-bottom: 0;
+    margin-top: -0.1em;
+    font-size: 1em;
+    font-size: 1.9em;
 }
-/* seccion class = especie  contenedora de divs cuidados*/
+
+/*-------------------------------------------------------------------*/
+/* seccion class = .especie  contenedora de divs cuidados*/
+/*---- .especie -----*/
 .main .especie {
     padding-left: 15em;
     padding-right: 15em;
     border-radius: 0.4em;
     padding-bottom: 1em;
-    margin-bottom:1em ;
+    margin-bottom: 1em;
     background-color: var(--primario);
-    border: 2px solid VIOLET;
-    
 }
-/*div contenedor de texto y fotos*/
-.main  .especie .contenedorEspecie {
-    display: flex; 
-  
-} 
-/*Modifica el div #inicioEspecie*/
-.main #inicioEspecie {
-    padding-top: 0.1em;
-}
-.main #inicioEspecie h1,.main #inicioEspecie h3{
-    text-align: center;
-    color: var(--terciario);
-}
-/**/
-/*     .datos especie contienen todo el texto de cuidados       */
-.main .especie .contenedorEspecie .datosEspecie {
-padding-bottom: 0.2em;
-}
-/*div contenedor de fotos*/
-/*.imagenesEspecie*/
-.main .especie .contenedorEspecie .imagenesEspecie{
-    
-    height: auto;
-}
-.main .especie .contenedorEspecie .imagenesEspecie ul {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: space-around;
-    width: 300px;
-   padding: 0.5em 0.5em;
-}
-.main .especie .contenedorEspecie .imagenesEspecie ul li{
-    width: 100%;
-    max-height: 400px;
-    height: 400px;
-   color: var(--terciario);
-   list-style: none;
-   margin-bottom: 2em;
-   text-align: center;
-  
-}
-/*imagenes de .imagenesEspecie*/
-.main .especie .contenedorEspecie .imagenesEspecie ul li img{
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5em;
-}
-/**/
-/*div de link de inicio ExoticasBanfield*/
-.main .especie #inicio ul{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
 
-}
-/*Div de fotos muestra de .especie*/
-.main .especie #fotosGuia {
-  
-    padding: 0;
-}
-.main .especie #fotosGuia ul {
-   display: flex;
-   justify-content: space-between;
-   list-style: none;
-   padding: 1em;
-}
-.main .especie #fotosGuia ul li{
-    width :30%;
-    height: 30%;
+/*div contenedor de texto y fotos*/
+.main .especie .contenedorEspecie {
+    display: flex;
+    flex-direction: row;
     
 }
-/*img de .especie*/
-.main .especie #fotosGuia ul li img{
-    border-radius: 1em;
-width: 100%;
+
+/*     .datosEspecie :contiene todo el texto de cuidados       */
+.main .especie .contenedorEspecie .datosEspecie {
+    padding-bottom: 0.2em;
 }
+
+/*-----------titulos y Texto de tarjeta especie---------------------*/
+.main .especie .contenedorEspecie .datosEspecie .cuidados h4,
+.main .especie .contenedorEspecie .datosEspecie .cuidados p {
+    color: var(--primario);
+}
+
 /*div de cada modulo*/
-.main .especie .cuidados{
-    border-radius: 0.5em ;
+.main .especie .cuidados {
+    border-radius: 0.5em;
     background-color: var(--terciario);
-   padding-bottom: 1em;
-   margin:0  0.5em;
-   margin-bottom: 0;
+    padding-bottom: 1em;
+    margin: 0 0.5em;
+    margin-bottom: 0;
 }
-/*Titulo Nombre de la especie */
-.main .especie h2{
+
+/*Titulo -Nombre de la especie */
+.main .especie h2 {
     margin-left: 0.2em;
     color: var(--terciario);
     padding-top: 0.5em;
     text-align: center;
 }
+
 /* Titulos de cada div cuidados*/
-.main .especie h4{
-    
+.main .especie h4 {
     color: var(--primario);
     text-align: center;
     margin-bottom: 0.2em;
     border-bottom: 1px solid var(--primario);
-    font-size: 1.6em;
+    font-size: 2em;
 }
+
 /*Texto de cada div cuidado*/
-.main .especie p{
+.main .especie p {
     margin: 0em 1em 0em 1em;
     font-size: 1.5em;
 }
+
+/*-------Div imagenesEspecie : contenedor fotos (ul,li)----------------------*/
+/*.imagenesEspecie*/
+.main .especie .contenedorEspecie .imagenesEspecie {
+    height: auto;
+}
+
+/*----- ul---- */
+.main .especie .contenedorEspecie .imagenesEspecie ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    padding: 0.5em 0.5em;
+}
+
+/*-------- li --------*/
+.main .especie .contenedorEspecie .imagenesEspecie ul li {
+    width: 100%;
+    height: 400px;
+    color: var(--terciario);
+    list-style: none;
+    margin-bottom: 2em;
+    text-align: center;
+
+}
+
+/*------- img ------*/
+.main .especie .contenedorEspecie .imagenesEspecie ul li img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em;
+}
+
+/*-----------div #inicioEspecie : predeterminado----------------*/
+/*---- #inicioEspecie -----*/
+.main #inicioEspecie {
+    padding-top: 0.1em;
+}
+
+/*---- #inicioEspecie/h3 y h1 -----*/
+.main #inicioEspecie h1 {
+    text-align: center;
+    color: var(--terciario);
+    font-size: 3em;
+
+}
+
+.main #inicioEspecie h3 {
+    text-align: center;
+    color: var(--terciario);
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+/**/
+
+@media(max-width:1300px) {
+    .main .especie {
+        padding: 0em 8em;
+    }
+}
+/**/
+@media(max-width:1200px){
+    .main .especie {
+        padding: 0em 5em;
+        
+    }
+}
+/**/
+@media(max-width:980px){
+    .main .especie {
+        padding: 0em 2em;
+    }
+    /*-------- .contenedorEspecie ---------*/
+    .main .especie .contenedorEspecie{
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    /*-------- div .especie .cuidados------*/
+    .main .especie .contenedorEspecie .datosEspecie .cuidados h4{
+        font-size: 2.7em;
+    }  
+    .main .especie .contenedorEspecie .datosEspecie .cuidados p{
+        font-size: 2em;
+    }  
+    /*--------- Imagenes------*/
+    
+    .main .especie .contenedorEspecie .imagenesEspecie{
+        width: 100%;
+    }  
+    .main .especie .contenedorEspecie .imagenesEspecie ul{
+            width: 100%;
+    }  
+    .main .especie .contenedorEspecie .imagenesEspecie ul li{
+        width: 100%;
+        height: 100%;
+        
+} 
+.main .especie .contenedorEspecie .imagenesEspecie ul li p{
+    font-size: 2em;
+   
+} 
+}
+/**/
