@@ -1,7 +1,7 @@
 
  document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems,{
+  M.Carousel.init(elems,{
   fullWidth:false,
   numVisible:7,
   dist:0,
@@ -10,7 +10,14 @@
  padding:0
 });
 });
-
+function desplegarEspecies(){
+  var especies=document.getElementById("desplegable");
+  if(especies.style.display==="none" || especies.style.display === ""){
+    especies.style.display="block";
+  }else{
+    especies.style.display="none";
+  }
+}
 function guia(dato) {
   
   var datoEspecie = dato.toLowerCase();
@@ -20,6 +27,7 @@ function guia(dato) {
     if (nuevoDato.style.display === "none" || nuevoDato.style.display === "") {
       cerrarSecciones();
       nuevoDato.style.display = "block";
+      desplegarEspecies()
     } else {
       cerrarSecciones();
       abrirTextoInicio();

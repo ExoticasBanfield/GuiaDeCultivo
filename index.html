@@ -12,9 +12,15 @@
 <body>
     <div class="contenedor">
         <header class="header">
-            <div class="inicio">
-                <a href="index.html">Exoticas Banfield</a>
-            </div>
+            
+            <nav >
+                <div class="inicio">
+                    <a href="index.html">Exoticas Banfield</a>
+                </div>
+                <ul>
+                    <li><button onclick="desplegarEspecies()" id="butonDesplegable"><p>Ver Mas</p></button> </li>
+                </ul>
+            </nav>
             <!--
             <nav>
                 <ul>
@@ -26,6 +32,52 @@
                 </ul>
             </nav>
 -->
+            <!-- -->
+            <article class="Especies" id="desplegable">
+
+                <button onclick="guia('brocchinia')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="">
+                        <p>Brocchinia</p>
+                    </div>
+                </button>
+                <button onclick="guia('dionaea')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/venus.png" alt="">
+                        <p>Dionaea</p>
+                    </div>
+                </button>
+                <button onclick="guia('drosera')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/drosera.png" alt="">
+                        <p>Drosera</p>
+                    </div>
+                </button>
+                <button onclick="guia('nepenthes')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/nepenthes.png" alt="">
+                        <p>Nepenthes</p>
+                    </div>
+                </button>
+                <button onclick="guia('pinguicula')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/pinguicula.png" alt="">
+                        <p>Pinguicula</p>
+                    </div>
+                </button>
+                <button onclick="guia('sarracenia')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/sarracenia.png" alt="">
+                        <p>Sarracenia</p>
+                    </div>
+                </button>
+                <button onclick="guia('stylidium')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/stylidium.png" alt="">
+                        <p>Stylidium</p>
+                    </div>
+                </button>
+                <button onclick="guia('utricularia')" class="especieButon" id="butonEspecie">
+                    <div><img src="Imagenes/iconos/plantas/utricularia.png" alt="">
+                        <p>Utricularia</p>
+                    </div>
+                </button>
+
+
+            </article>
         </header>
 
         <main class="main">
@@ -88,53 +140,8 @@
                             </div>
                         </button>></a>
                 </div>
-                <!--
-                <article class="Especies">
-
-                    <button onclick="guia('brocchinia')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="">
-                            <p>Brocchinia</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('dionaea')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/venus.png" alt="">
-                            <p>Dionaea</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('drosera')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/drosera.png" alt="">
-                            <p>Drosera</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('nepenthes')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/nepenthes.png" alt="">
-                            <p>Nepenthes</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('pinguicula')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/pinguicula.png" alt="">
-                            <p>Pinguicula</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('sarracenia')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/sarracenia.png" alt="">
-                            <p>Sarracenia</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('stylidium')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/stylidium.png" alt="">
-                            <p>Stylidium</p>
-                        </div>
-                    </button>
-                    <button onclick="guia('utricularia')" class="especieButon" id="butonEspecie">
-                        <div><img src="Imagenes/iconos/plantas/utricularia.png" alt="">
-                            <p>Utricularia</p>
-                        </div>
-                    </button>
 
 
-                </article>
-                 -->
             </section>
             <!---->
 
@@ -190,7 +197,7 @@
                                 donde son digeridos por los liquidos </p>
 
                         </div>
-                        
+
                         <div class="cuidados" id="temperatura">
                             <h4>Temperatura</h4>
                             <p>En su lugar de origen tienen temperaturas promedio muy frescas, entre 10º y 25º </p>
@@ -205,7 +212,8 @@
                         </div>
                         <div class="cuidados" id="humedad">
                             <h4>Humedad</h4>
-                            <p>Viven en ambientes muy humedos pero en su mayoria toleran una humedad ambiental entre el 50%
+                            <p>Viven en ambientes muy humedos pero en su mayoria toleran una humedad ambiental entre el
+                                50%
                                 y 80%
                             </P>
                         </div>
@@ -293,12 +301,17 @@
                     </div>
                     <div class="imagenesEspecie">
                         <ul>
-                            <li><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg"
-                                    alt="Brocchinia"><p>Brocchinia hectchioides</p></li>
+                            <li><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="Brocchinia">
+                                <p>Brocchinia hectchioides</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/brocchinia/brocchinia_hechtioides_diviciones.jpg"
-                                    alt="brocchinia_hechtioides_diviciones"><p>Diviciones de Brocchinia Hechtioides</p></li>
+                                    alt="brocchinia_hechtioides_diviciones">
+                                <p>Diviciones de Brocchinia Hechtioides</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/brocchinia/brocchinia_hechtioides_adulta.jpg"
-                                    alt="brocchinia_hechtioides_adulta"><p>Brocchinia Hechtioides adulta</p></li>
+                                    alt="brocchinia_hechtioides_adulta">
+                                <p>Brocchinia Hechtioides adulta</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -607,9 +620,15 @@
                     </div>
                     <div class="imagenesEspecie">
                         <ul>
-                            <li><img src="Imagenes/Plantas/drosera/adelae.jpg" alt="Drosera"><p>Drosera Adelae</p></li>
-                            <li><img src="Imagenes/Plantas/drosera/admirabilis.jpg" alt="Drosera"><p>Admirabilis sp Floating</p></li>
-                            <li><img src="Imagenes/Plantas/drosera/drosera_3.jpg" alt="Drosera"><p>Drosera Sp</p></li>
+                            <li><img src="Imagenes/Plantas/drosera/adelae.jpg" alt="Drosera">
+                                <p>Drosera Adelae</p>
+                            </li>
+                            <li><img src="Imagenes/Plantas/drosera/admirabilis.jpg" alt="Drosera">
+                                <p>Admirabilis sp Floating</p>
+                            </li>
+                            <li><img src="Imagenes/Plantas/drosera/drosera_3.jpg" alt="Drosera">
+                                <p>Drosera Sp</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -626,16 +645,21 @@
                         <div class="cuidados" id="habitat">
                             <article>
                                 <h4>Habitat Natural</h4>
-                                <p>Crece Naturalmente en: Australia ,en la region Occidental  y del norte.Otras pueden encontrarse en el sudeste de Asia</p>
-                                <p>Entorno: Se desarrollan en una variedad de habitats,desde bosques humedos y matorrales hasta areas arenosas y abiertas </p>
+                                <p>Crece Naturalmente en: Australia ,en la region Occidental y del norte.Otras pueden
+                                    encontrarse en el sudeste de Asia</p>
+                                <p>Entorno: Se desarrollan en una variedad de habitats,desde bosques humedos y
+                                    matorrales hasta areas arenosas y abiertas </p>
                             </article>
                         </div>
 
                         <div class="cuidados" id="descripcion">
                             <article>
                                 <h4>Descripción</h4>
-                                <p>Es una planta de porte bajo y tapizante de suelo Crecen en rosetas con abundante floracion  </p>
-                                <p>Era considerada una <strong>Protocarnivora</strong> pero luego de varios estudios se condidero esta especie como <strong>Carnivora</strong> cumpliendo la funcion de poder digerir a sus presas y obtener los nutrientes necesarios</p>
+                                <p>Es una planta de porte bajo y tapizante de suelo Crecen en rosetas con abundante
+                                    floracion </p>
+                                <p>Era considerada una <strong>Protocarnivora</strong> pero luego de varios estudios se
+                                    condidero esta especie como <strong>Carnivora</strong> cumpliendo la funcion de
+                                    poder digerir a sus presas y obtener los nutrientes necesarios</p>
                             </article>
                         </div>
                         <div class="cuidados" id="tamaño">
@@ -664,7 +688,7 @@
                                 por
                                 períodos prolongados.</p>
                         </div>
-                        
+
                         <div class="cuidados" id="humedad">
                             <h4>Humedad</h4>
                             <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre el 40%
@@ -743,11 +767,16 @@
                     </div>
                     <div class="imagenesEspecie">
                         <ul>
-                            <li><img src="Imagenes/Plantas/stylidium/stylidium flor.jpg" alt="stylidium flor"><p>Flor de Stylidium</p></li>
-                            <li><img src="Imagenes/Plantas/stylidium/stylidium_debile.jpg"
-                                    alt="stylidium debile"><p>Stylidium Debile</p></li>
+                            <li><img src="Imagenes/Plantas/stylidium/stylidium flor.jpg" alt="stylidium flor">
+                                <p>Flor de Stylidium</p>
+                            </li>
+                            <li><img src="Imagenes/Plantas/stylidium/stylidium_debile.jpg" alt="stylidium debile">
+                                <p>Stylidium Debile</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/stylidium/stylidium_debile_floracion.jpg"
-                                    alt="stylidium_debile_floracion"><p>Stylidium Debile en floracion</p></li>
+                                    alt="stylidium_debile_floracion">
+                                <p>Stylidium Debile en floracion</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -764,7 +793,7 @@
                             <article>
                                 <h4>Habitat Natural</h4>
                                 <p>Crece Naturalmente en los pantanos y
-                                    ciénagas del  sureste y noreste de de los Estados Unidos  y Canadá.</p>
+                                    ciénagas del sureste y noreste de de los Estados Unidos y Canadá.</p>
                                 <p>Se desarrolla en entornos pobres en nitrógeno, como pantanos y humedales en hábitats
                                     con
                                     alta exposición a la luz solar.
@@ -849,8 +878,8 @@
                                     el punto de crecimiento ha llegado al borde de la maceta.</p>
                             </article>
                         </div>
-                        
-                        
+
+
                         <div class="cuidados" id="iluminacion">
                             <article>
                                 <h4>Iluminación</h4>
@@ -894,11 +923,17 @@
                     <div class="imagenesEspecie">
                         <ul>
                             <li><img src="Imagenes/Plantas/sarracenia/sarracenia_semillas.jpg"
-                                    alt="sarracenia_semillas"><p>Semillas de Sarracenias</p></li>
+                                    alt="sarracenia_semillas">
+                                <p>Semillas de Sarracenias</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/sarracenia/sarracenia_minorHibernando.jpg"
-                                    alt="sarracenia_minorHibernando"><p>Sarracenia Minor Hibernando</p></li>
+                                    alt="sarracenia_minorHibernando">
+                                <p>Sarracenia Minor Hibernando</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/sarracenia/sarracenia_atropurpurea.jpg"
-                                    alt="sarracenia_atropurpurea"><p>Sarracenia Atropurpurea</p></li>
+                                    alt="sarracenia_atropurpurea">
+                                <p>Sarracenia Atropurpurea</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -956,12 +991,19 @@
                         <div class="cuidados" id="temperatura">
                             <article>
                                 <h4>Temperatura</h4>
-                                <p>Toleran desde los 10º hasta los 35ºC pero es importante conocer sobre la especie para darle la temperatura necesaria </p>
-                                <p><strong>Lowland :</strong>Necesita temperaturas que ronden entre los 20º a 35ºC durante todo el año , una temperatura por debajo podria afectar la planta hasta su muerte </p>
-                                <p><strong>Intermedias :</strong>Toleran temperaturas  entre los 15º y 30º .</p>
-                                <p><strong>Higland :</strong>Necesita temperaturas diurnas  entre 20º a 25º y nocturas entre los 15º y 20º . </p>
-                                <p>Los requisitos estrictos en algunas especies de nepenthes hacen que sea necesaria una climatizacion artificial para mantenernas con vida ,ademas de mantener una humedad alta</p>
-                                <p>Existen hibridos muy resistentes al clima argentino como ventrata , ventricosa x khasiana y mas </p>
+                                <p>Toleran desde los 10º hasta los 35ºC pero es importante conocer sobre la especie para
+                                    darle la temperatura necesaria </p>
+                                <p><strong>Lowland :</strong>Necesita temperaturas que ronden entre los 20º a 35ºC
+                                    durante todo el año , una temperatura por debajo podria afectar la planta hasta su
+                                    muerte </p>
+                                <p><strong>Intermedias :</strong>Toleran temperaturas entre los 15º y 30º .</p>
+                                <p><strong>Higland :</strong>Necesita temperaturas diurnas entre 20º a 25º y nocturas
+                                    entre los 15º y 20º . </p>
+                                <p>Los requisitos estrictos en algunas especies de nepenthes hacen que sea necesaria una
+                                    climatizacion artificial para mantenernas con vida ,ademas de mantener una humedad
+                                    alta</p>
+                                <p>Existen hibridos muy resistentes al clima argentino como ventrata , ventricosa x
+                                    khasiana y mas </p>
                             </article>
                         </div>
                         <div class="cuidados" id="humedad">
@@ -972,7 +1014,9 @@
                                 <p>Algunos hibridos toleran una humedad ambiental mas baja como la x Ventrata,
                                     Ventricosa x khasiana, Maxima y mas </p>
                                 <p>Usualmente se cultiva en invernaderos climatizados por su exigencia de cultivo</p>
-                                <p>Los requisitos de la humedad en algunas algunas Nepenthes hacen que sean muy dificiles de cultivar , ademas sin la humedad necesaria no se produciran las trampas o saldran deformen </p>
+                                <p>Los requisitos de la humedad en algunas algunas Nepenthes hacen que sean muy
+                                    dificiles de cultivar , ademas sin la humedad necesaria no se produciran las trampas
+                                    o saldran deformen </p>
                                 <p>Existen hibridos resistentes a una humedad mas baja </p>
                             </article>
                         </div>
@@ -1027,7 +1071,7 @@
                                     maceta.</p>
                             </article>
                         </div>
-                       
+
                         <div class="cuidados" id="Iluminacion">
                             <article>
                                 <h4>Iluminacion :</h4>
@@ -1072,11 +1116,17 @@
                     <div class="imagenesEspecie">
                         <ul>
                             <li><img src="Imagenes/Plantas/nepenthes/nepenthes_Maximaxspectabilis_jarro.jpg"
-                                    alt="nepenthes_Maximaxspectabilis_jarro"><p>Maxima x Spectabilis-Trampa</p></li>
+                                    alt="nepenthes_Maximaxspectabilis_jarro">
+                                <p>Maxima x Spectabilis-Trampa</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/nepenthes/nepenthes_ventricosaxKhasiana_madre.jpg"
-                                    alt="nepenthes_ventricosaxKhasiana_adulta"><p>Ventricosa x Khasiana adulta</p></li>
+                                    alt="nepenthes_ventricosaxKhasiana_adulta">
+                                <p>Ventricosa x Khasiana adulta</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/nepenthes/nepenthes_vikingxVentricosa_insectos.jpg"
-                                    alt="nepenthes_vikingxVentricosa_insectos"><p>Viking x Ventricosa lleno de hormigas</p></li>
+                                    alt="nepenthes_vikingxVentricosa_insectos">
+                                <p>Viking x Ventricosa lleno de hormigas</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1137,7 +1187,9 @@
                         <div class="cuidados" id="humedad">
                             <article>
                                 <h4>Humedad</h4>
-                                <p>Pueden tolerar una humedad del 50 al 70% , una humedad muy alta,riego excesivo y poca ventilacion de seguro van a pudrir la planta . Se debe controlar la ventilacion y riego segun la humedad que tengan en su cercania </p>
+                                <p>Pueden tolerar una humedad del 50 al 70% , una humedad muy alta,riego excesivo y poca
+                                    ventilacion de seguro van a pudrir la planta . Se debe controlar la ventilacion y
+                                    riego segun la humedad que tengan en su cercania </p>
                             </article>
 
                         </div>
@@ -1240,12 +1292,18 @@
                     <div class="imagenesEspecie">
                         <ul>
                             <li><img src="Imagenes/Plantas/pinguicula/pinguicula_giganteaAlbaxMoctezumae_flor.jpg"
-                                    alt="pinguicula_giganteaAlbaxMoctezumae_flor"><p>Flor de pinguicula GiganteaAlba x
-                                        Moctezumae</p></li>
+                                    alt="pinguicula_giganteaAlbaxMoctezumae_flor">
+                                <p>Flor de pinguicula GiganteaAlba x
+                                    Moctezumae</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/pinguicula/pinguicula_sethos_rosetaInvierno.jpg"
-                                    alt="pinguicula_sethos_rosetaInvierno"><p>Pinguicula x Sethos en Roseta de invierno</p></li>
+                                    alt="pinguicula_sethos_rosetaInvierno">
+                                <p>Pinguicula x Sethos en Roseta de invierno</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/pinguicula/pinguicula_afrodita.jpg"
-                                    alt="pinguicula_afrodita"><p>Pinguicula x Afrodita</p></li>
+                                    alt="pinguicula_afrodita">
+                                <p>Pinguicula x Afrodita</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1314,7 +1372,9 @@
                         <div class="cuidados" id="humedad">
                             <article>
                                 <h4>Humedad</h4>
-                                <p>Dependiendo la planta , toleran una humedad del 50% al 90%, la necesidad de una humedad alta se aplica a variedades tropicales . Variedades terrestres se desarrollan bien en humedades mas bajas 
+                                <p>Dependiendo la planta , toleran una humedad del 50% al 90%, la necesidad de una
+                                    humedad alta se aplica a variedades tropicales . Variedades terrestres se
+                                    desarrollan bien en humedades mas bajas
                                 </p>
                             </article>
                         </div>
@@ -1395,11 +1455,17 @@
                     <div class="imagenesEspecie">
                         <ul>
                             <li><img src="Imagenes/Plantas/utricularia/utricularia_longifolia_raices.jpg"
-                                    alt="longifolia_flor"><p>Raices de Utricularia Longifolia</p></li>
+                                    alt="longifolia_flor">
+                                <p>Raices de Utricularia Longifolia</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/utricularia/utricularia_sandersonii_cultivo.jpg"
-                                    alt="utricularia_sandersonii_cultivo"><p>Utricularia sandersonii</p></li>
-                            <li><img src="Imagenes/Plantas/utricularia/prehensilis_flor.jpg" alt="prehensilis_flor"><p>Flor
-                                de utricularia Prehensilis</p></li>
+                                    alt="utricularia_sandersonii_cultivo">
+                                <p>Utricularia sandersonii</p>
+                            </li>
+                            <li><img src="Imagenes/Plantas/utricularia/prehensilis_flor.jpg" alt="prehensilis_flor">
+                                <p>Flor
+                                    de utricularia Prehensilis</p>
+                            </li>
                         </ul>
                     </div>
                 </div>

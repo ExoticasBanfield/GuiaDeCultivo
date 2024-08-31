@@ -10,7 +10,7 @@ body {
 }
 
 /*------HEADER-------*/
-.contenedor .header {
+.contenedor .header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,10 +20,11 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+  
 }
 /*Link inicio header*/
 /* <a> exoticas*/
-.contenedor .header .inicio a {
+.contenedor .header nav .inicio a {
     list-style: none;
     text-decoration: none;
     color: var(--terciario);
@@ -36,11 +37,64 @@ body {
 .contenedor .header nav ul {
     list-style: none;
     color: var(--terciario);
-    display: flex;
+    display: block;
     gap: 2em;
     justify-content: flex-start;
+    
+   
 }
 
+.contenedor .header nav ul li #butonDesplegable{
+    
+    margin: 0;
+    width: 130px;
+    background-color: var(--primario);
+    border: var(--primario);
+}
+.contenedor .header nav ul li #butonDesplegable p{
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+color: var(--terciario);
+}
+/*-----   Barra desplagable   ----*/
+.contenedor .header #desplegable {
+display: none;
+position: fixed;
+justify-content: space-around;
+left: 0;
+top: 0;
+background-color: var(--primario);
+width: 150px;
+height: 100%;
+padding: 0.3em;
+}
+.contenedor .header #desplegable .especieButon{
+    width: 100%;
+    height: 150px;
+    margin: 0.2em 0em;
+    padding: 0;
+}
+.contenedor .header #desplegable .especieButon div{
+    width: 100%;
+    height: 100%;
+    
+    background-color: white;
+}
+.contenedor .header #desplegable .especieButon  div img{
+    width: 100%;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+}
+.contenedor .header #desplegable .especieButon div p{
+    width: 100%;
+    max-height: 30%;
+    font-size: 1.7em;
+    padding: 0.22em 0em;
+    margin: 0;
+    background-color: var(--secundario);
+}
 /*-----Ocultar secciones de especie--------*/
 .main #dionaea,
 #drosera,
