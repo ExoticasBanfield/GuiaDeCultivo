@@ -252,7 +252,7 @@ body {
 .main #inicioEspecie h3 {
     text-align: center;
     color: var(--terciario);
-    font-size: 2em;
+    font-size: 2.2em;
     padding-bottom: 1em;
 }
 
@@ -283,10 +283,10 @@ body {
       }
     /*-------- div .especie .cuidados------*/
     .main .especie .contenedorEspecie .datosEspecie .cuidados h4{
-        font-size: 2.7em;
+        font-size: 2.8em;
     }  
     .main .especie .contenedorEspecie .datosEspecie .cuidados p{
-        font-size: 2em;
+        font-size: 2.3em;
     }  
     /*--------- Imagenes------*/
     
@@ -302,7 +302,7 @@ body {
         
 } 
 .main .especie .contenedorEspecie .imagenesEspecie ul li p{
-    font-size: 2em;
+    font-size: 2.2em;
    
 } 
 }
