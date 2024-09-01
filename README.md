@@ -13,9 +13,6 @@ Este proyecto solo es el inicio y gradualmente se ira expandiendo a una guia mas
 
 Esta guía se basa en la experiencia personal del autor, adquirida a lo largo de varios años de cultivo de plantas carnívoras en el clima argentino. Además, se ha complementado con información real y científica, recopilada de diversas fuentes confiables. El contenido está orientado a facilitar el cultivo de estas fascinantes plantas en condiciones climáticas similares a las de Argentina, pero puede ser adaptado a otros climas con las recomendaciones adecuadas.
 
-## Colaboraciones
-
-Se aceptan colaboraciones para mejorar y ampliar esta guía. Si tienes conocimientos adicionales o experiencias que podrían enriquecer el contenido, no dudes en contribuir. Toda aportación será reconocida debidamente.
 
 ## Derechos de Autor
 
