@@ -27,7 +27,7 @@ Si deseas contribuir a este proyecto con información adicional o mejoras en la 
 
 ## Contacto
 
-Si tienes preguntas, sugerencias sobre el proyecto o buscas colaborar, no dudes en contactarme a través de [gonzalezmatias6164@gmail.com](mailto:gonzalezmatias6164@gmail.com).
+Si tienes preguntas, sugerencias sobre el proyecto o buscas colaborar, no dudes en contactarme a través de [gonzalezmatias6164@gmail.com](mailto:gonzalezmatias6164@gmail.com). Asunto de preferencia :GuiadePlantas Carnivoras/github
 
 ## Licencia
 
