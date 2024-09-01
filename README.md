@@ -1,2 +1,2 @@
 # GuiaDeCultivo
-infex.html
+index.html
