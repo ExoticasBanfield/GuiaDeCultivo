@@ -8,7 +8,27 @@
 body {
     margin: 0;
 }
+/*---------- barra desplegable  --------------*/
+.contenedor #slide-out-rigth li h4,
+.contenedor #slide-out-left li h4{
+    color: var(--primario);
+    font-size: 3em;
+    margin-left: 0.5em;
 
+}
+.contenedor #slide-out-rigth li a,
+.contenedor #slide-out-left li a{
+    color: var(--primario);
+    font-size: 2em;
+
+}
+.contenedor #slide-out-rigth ul li   #cerrar-sidenav i,
+.contenedor #slide-out-left ul li   #cerrar-sidenav2 i{
+    color: var(--primario);
+    font-size: 2em;
+
+}
+/**/
 /*------HEADER-------*/
 .contenedor .header nav{
     display: flex;
@@ -16,15 +36,10 @@ body {
     justify-content: space-between;
     background-color: var(--primario);
 }
-.contenedor .header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-  
-}
+
 /*Link inicio header*/
 /* <a> exoticas*/
-.contenedor .header nav .inicio a {
+.contenedor header nav .inicio a  {
     list-style: none;
     text-decoration: none;
     color: var(--terciario);
@@ -57,45 +72,8 @@ body {
     margin: 0;
 color: var(--terciario);
 }
-/*-----   Barra desplagable   ----*/
-.contenedor .header #desplegable {
-display: none;
-position: fixed;
-justify-content: space-between;
-left: 0;
-top: 8.5%;
-background-color: var(--primario);
-width: 100px;
-height: 91.5vh;
-padding: 0.3em;
 
-}
-.contenedor .header #desplegable .especieButon{
-    width: 100%;
-    height: 11.3%;
-    margin: 0.2em 0em;
-    padding: 0;
-}
-.contenedor .header #desplegable .especieButon div{
-    width: 100%;
-    height: 100%;
-    
-    background-color: white;
-}
-.contenedor .header #desplegable .especieButon  div img{
-    width: 100%;
-    height: 70%;
-    margin: 0;
-    padding: 0;
-}
-.contenedor .header #desplegable .especieButon div p{
-    width: 100%;
-    max-height: 30%;
-    font-size: 1.1em;
-    padding: 0.22em 0em;
-    margin: 0;
-    background-color: var(--secundario);
-}
+
 /*-----Ocultar secciones de especie--------*/
 .main #dionaea,
 #drosera,
@@ -149,6 +127,7 @@ padding: 0.3em;
     align-items: center;
     justify-content: center;
     margin: 0em;
+    overflow: hidden;
 
 }
 
@@ -275,7 +254,7 @@ padding: 0.3em;
     align-items: center;
     justify-content: space-around;
     width: 350px;
-    padding: 0.5em 0.5em;
+    padding: 0.5em 0.8em;
 }
 
 /*-------- li --------*/
@@ -284,7 +263,7 @@ padding: 0.3em;
     height: 400px;
     color: var(--terciario);
     list-style: none;
-    margin-bottom: 2em;
+    margin-bottom: 6em;
     text-align: center;
 
 }
@@ -320,8 +299,88 @@ padding: 0.3em;
 }
 /*-------------------     Footer: contenedor/page-footer  ----------------------*/
 .contenedor .page-footer{
-    background-color: var(--primario
-    );
+    background-color: var(--primario);
+    margin-bottom: 4.3em;
+}
+/*---------------article links---------*/
+.contenedor .page-footer .container .row article  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;  
+    height: 100%;
+    
+ }
+ /*----- separador -----*/
+ .contenedor .page-footer .container article #separador {
+    
+    border-left: 2px solid var(--terciario);
+    
+ }
+.contenedor .page-footer .container article .col {
+    
+    
+     margin: 0;
+     padding: 0;
+     justify-content: space-around;
+     
+  }
+.contenedor .page-footer .container article h5{
+    color: var(--terciario);
+    font-size: 4em;
+  }
+.contenedor .page-footer .container article a{
+   color: var(--terciario);
+   font-size: 3em;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+ 
+ }
+ 
+ .contenedor .page-footer .container article .col .section li{
+    color: var(--terciario);
+     padding: 0.1em 0em;
+     margin: 0.3em 0em;
+     width: 100%;
+     height: 100%;
+     
+  }
+  
+  
+/*recomendacion*/
+.contenedor .page-footer .container .row #recomendacion h5{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.contenedor .page-footer .container .row #recomendacion  {
+    text-align: center;
+    width: 100%;
+    font-size: 2.5em;
+}
+.contenedor .page-footer .footer-copyright .container{
+    font-size: 2em;
+    width: 100%;
+}
+/**/
+/*---------   Header2 ---------*/
+.contenedor .header2{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+   
+}
+.contenedor .header2 nav {
+    background-color: var(--primario);
+}
+.contenedor .header2 nav ul{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
 }
 /**/
 
@@ -371,6 +430,26 @@ padding: 0.3em;
 .main .especie .contenedorEspecie .imagenesEspecie ul li p{
     font-size: 2.2em;
    
+}
+/*-------------------     Footer: contenedor/page-footer  ----------------------*/
+.contenedor .page-footer{
+    background-color: var(--primario
+    );
+}
+/*---------------article links---------*/
+.contenedor .page-footer .container article {
+    text-align: center;
+    width: 100%;
+}
+.contenedor .page-footer .container article #separador {
+    border-top: 2px solid var(--terciario);
+    width: 100%;
+ }
+/**/
+.contenedor .page-footer .container .row #recomendacion {
+    text-align: center;
+    width: 100%;
 } 
+
 }
 /**/

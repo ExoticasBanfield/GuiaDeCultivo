@@ -9,30 +9,47 @@
  shift:0,
  padding:0
 });
+/**Instancio la barra lateral */
+var barralateral = document.querySelector('#slide-out-rigth');
+var instanciaSidenav=M.Sidenav.init(barralateral,{
+  edge:"right",
 });
-function desplegarEspecies(){
-  var especies=document.getElementById("desplegable");
-  if(especies.style.display==="none" || especies.style.display === ""){
-    especies.style.display="block";
-  }else{
-    especies.style.display="none";
-  }
-}
+// Agregar el evento de clic al ícono de cerrar
+document.querySelector('#cerrar-sidenav').addEventListener('click', function() {
+  instanciaSidenav.close();
+});
+/**Instancio la barra lateral */
+var barralateral2 = document.querySelector('#slide-out-left');
+var instanciaSidenav2=M.Sidenav.init(barralateral2,{
+  edge:"left",
+})
+// Agregar el evento de clic al ícono de cerrar
+document.querySelector('#cerrar-sidenav2').addEventListener('click', function() {
+  instanciaSidenav2.close();
+});
+/** */
+var scroll = document.querySelectorAll('.scrollspy');
+var instances = M.ScrollSpy.init(scroll);
+/** */
+
+});
+/** */
+
 /** */
 function guia2(dato){ 
+
   var datoEspecie = dato.toLowerCase();
   var nuevoDato = document.getElementById(datoEspecie);
-  
-  
+  setTimeout(function() {
+    nuevoDato.scrollIntoView({ behavior: 'smooth' }); 
+    const offset = 40; // Ajusta este valor según el espacio adicional deseado
+    window.scrollBy(0, -offset); // Desplaza la ventana hacia arriba
+}, 00); // Espera un poco para asegurar que scrollIntoView se complete
+ 
     if (nuevoDato.style.display === "none" || nuevoDato.style.display === "") {
       cerrarSecciones();
       nuevoDato.style.display = "block";
-      setTimeout(function() {
-        nuevoDato.scrollIntoView({ behavior: 'smooth' }); 
-        const offset = 42; // Ajusta este valor según el espacio adicional deseado
-        window.scrollBy(0, -offset); // Desplaza la ventana hacia arriba
-    }, 400); // Espera un poco para asegurar que scrollIntoView se complete
-     
+    
   } else {
       cerrarSecciones();
       abrirTextoInicio();

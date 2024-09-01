@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Guia de Cultivo de Plantas Carnivoras</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -11,14 +12,66 @@
 
 <body>
     <div class="contenedor">
+        <!---full screen rigth : guias-->
+        <ul id="slide-out-rigth" class="sidenav">
+            <li class="titulo">
+                <h4>Guias Basicas</h4>
+            </li>
+            <ul class="section table-of-contents">
+                <li><a href="#brocchinia" onclick="guia('brocchinia')">Brochinia</a></li>
+                <li class="separador"></li>
+                <li><a href="#dionaea" onclick="guia('dionaea')">Dionaea</a></li>
+                <li class="separador"></li>
+                <li><a href="#drosera" onclick="guia('drosera')">Drosera</a></li>
+                <li class="separador"></li>
+                <li><a href="#nepenthes" onclick="guia('nepenthes')">Nepenthes</a></li>
+                <li class="separador"></li>
+                <li><a href="#pinguicula" onclick="guia('pinguicula')">Pinguicula</a></li>
+                <li class="separador"></li>
+                <li><a href="#sarracenia" onclick="guia('sarracenia')">Sarracenia</a></li>
+                <li class="separador"></li>
+                <li><a href="#stytlidium" onclick="guia('stylidium')">Stylidium</a></li>
+                <li class="separador"></li>
+                <li><a href="#utricularia" onclick="guia('utricularia')">Utricularia</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" id="cerrar-sidenav"><i class="material-icons">highlight_off</i></a></li>
+            </ul>
+
+        </ul>
+
+        <!---->
+        <!---full screen left : contacto-->
+        <ul id="slide-out-left" class="sidenav">
+            <li class="titulo">
+                <h4>Guias Basicas</h4>
+            </li>
+            <ul class="section table-of-contents">
+                <li><a href="#brocchinia" onclick="guia('brocchinia')">Contactanos</a></li>
+                <li class="separador"></li>
+                <li><a href="#dionaea" onclick="guia('dionaea')">Recomendaciones</a></li>
+            </ul>
+            <ul>
+                <li><a href="#" id="cerrar-sidenav2"><i class="material-icons">highlight_off</i></a></li>
+            </ul>
+
+        </ul>
+        <!---->
+        <!---->
         <header class="header">
-            
-            <nav >
+
+            <nav>
                 <div class="inicio">
                     <a href="index.html">Exoticas Banfield</a>
                 </div>
                 <ul>
-                    <li><button onclick="desplegarEspecies()" id="butonDesplegable"><p>Ver Mas</p></button> </li>
+                    <li><a href="#" data-target="slide-out-rigth" class="sidenav-trigger show-on-large"><i
+                                class="material-icons">arrow_downward</i></a></li>
+                    <!--
+                   
+                    <li><button onclick="desplegarEspecies()" id="butonDesplegable"><p>Ver Mas</p></button> </li>-->
+
+
                 </ul>
             </nav>
             <!--
@@ -31,53 +84,9 @@
 
                 </ul>
             </nav>
--->
+                   -->
             <!-- -->
-            <article class="Especies" id="desplegable">
 
-                <button onclick="guia2('brocchinia')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="">
-                        <p>Brocchinia</p>
-                    </div>
-                </button>
-                <button onclick="guia2('dionaea')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/venus.png" alt="">
-                        <p>Dionaea</p>
-                    </div>
-                </button>
-                <button onclick="guia2('drosera')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/drosera.png" alt="">
-                        <p>Drosera</p>
-                    </div>
-                </button>
-                <button onclick="guia2('nepenthes')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/nepenthes.png" alt="">
-                        <p>Nepenthes</p>
-                    </div>
-                </button>
-                <button onclick="guia2('pinguicula')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/pinguicula.png" alt="">
-                        <p>Pinguicula</p>
-                    </div>
-                </button>
-                <button onclick="guia2('sarracenia')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/sarracenia.png" alt="">
-                        <p>Sarracenia</p>
-                    </div>
-                </button>
-                <button onclick="guia2('stylidium')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/stylidium.png" alt="">
-                        <p>Stylidium</p>
-                    </div>
-                </button>
-                <button onclick="guia2('utricularia')" class="especieButon" id="butonEspecie">
-                    <div><img src="Imagenes/iconos/plantas/utricularia.png" alt="">
-                        <p>Utricularia</p>
-                    </div>
-                </button>
-
-
-            </article>
         </header>
 
         <main class="main">
@@ -141,14 +150,17 @@
                         </button>></a>
                 </div>
 
-
+                <div id="introduction" class="section scrollspy">
+                </div>
             </section>
             <!---->
 
             <!---->
             <section class="especie" id="inicioEspecie">
                 <div>
-                    <h1>Informate sobre los cuidados basicos de cada planta carnivora</h1>
+
+                    <h1 id="introduction" class="section scrollspy">Informate sobre los cuidados basicos de cada planta
+                        carnivora</h1>
                     <h3>Esta es una guia basica con cuidados generales para cada especie</h3>
 
                 </div>
@@ -159,7 +171,7 @@
 
             <section class="especie" id="brocchinia">
 
-                <h2>Brocchinia</h2>
+                <h2 id="introduction" class="section scrollspy">Brocchinia</h2>
 
 
                 <div class="contenedorEspecie">
@@ -170,7 +182,8 @@
                                 <p> Venezuela y algunas areas de brasil, donde se encuentra en los
                                     campos bajos del Monte Roraima
                                 </p>
-                                <p> Crece bajo condiciones extremas de alta humedad en ambientes rocosos y a gran
+                                <p> Crece bajo condiciones extremas de alta humedad en ambientes rocosos y a
+                                    gran
                                     altitud con lluvias frecuentes.</p>
                                 <p>Comparte habitad con las Heliamphoras en los Tepuyes de Venezuela</p>
 
@@ -193,26 +206,32 @@
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Metodo de Captura</h4>
-                            <p>Sus hojas tienen una fina capa resbaladiza , los insectos caen en el centro de la planta
+                            <p>Sus hojas tienen una fina capa resbaladiza , los insectos caen en el centro de la
+                                planta
                                 donde son digeridos por los liquidos </p>
 
                         </div>
 
                         <div class="cuidados" id="temperatura">
                             <h4>Temperatura</h4>
-                            <p>En su lugar de origen tienen temperaturas promedio muy frescas, entre 10º y 25º </p>
-                            <p>Tolera temperaturas de -0º a los 35º,siendo en epoca de crecimiento una temperatura
+                            <p>En su lugar de origen tienen temperaturas promedio muy frescas, entre 10º y 25º
+                            </p>
+                            <p>Tolera temperaturas de -0º a los 35º,siendo en epoca de crecimiento una
+                                temperatura
                                 ideal
                                 para su crecimiento entre los 20 y 25º </p>
-                            <p>Tener en cuenta que en epocas calurosas se deben mantener frescas para preservar la
+                            <p>Tener en cuenta que en epocas calurosas se deben mantener frescas para preservar
+                                la
                                 planta
                             </p>
-                            <p>Superados los 30º es mejor tenerla fuera del sol directo y donde la temperatura ambiente
+                            <p>Superados los 30º es mejor tenerla fuera del sol directo y donde la temperatura
+                                ambiente
                                 sea mas baja</p>
                         </div>
                         <div class="cuidados" id="humedad">
                             <h4>Humedad</h4>
-                            <p>Viven en ambientes muy humedos pero en su mayoria toleran una humedad ambiental entre el
+                            <p>Viven en ambientes muy humedos pero en su mayoria toleran una humedad ambiental
+                                entre el
                                 50%
                                 y 80%
                             </P>
@@ -220,17 +239,21 @@
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo Con agua destilada o de lluvia .Son plantas usualmente epifitas ,prefieren el
+                                <p>Solo Con agua destilada o de lluvia .Son plantas usualmente epifitas
+                                    ,prefieren el
                                     riego en el sustrato o por encima
                                 </p>
                                 <p>EL riego cambia segun la epoca del año </p>
                                 <p>En Primavera/Verano :
-                                    Se aconseja mantener el suelo siempre humedo con agua en la bandeja por poco tiempo
+                                    Se aconseja mantener el suelo siempre humedo con agua en la bandeja por poco
+                                    tiempo
                                     ,dejar la
                                     bandeja
-                                    seca si el sustrato esta humedo pero no dejar que se seque por completo .</p>
+                                    seca si el sustrato esta humedo pero no dejar que se seque por completo .
+                                </p>
                                 <p>En Otoño/Invierno :
-                                    Regar cuando es necesario manteniendo el sustrato humedo sin dejar agua en la
+                                    Regar cuando es necesario manteniendo el sustrato humedo sin dejar agua en
+                                    la
                                     bandeja .
                                 </p>
                             </article>
@@ -238,11 +261,14 @@
                         <div class="cuidados" id="Floracion">
                             <article>
                                 <h4>Floracion</h4>
-                                <p>Al igual que las bromelias , florece cuando es adulta y esta en el final de su
-                                    desarrollo .Luego de la floracion , la planta muere dejando "hijos" a sus lados. La
+                                <p>Al igual que las bromelias , florece cuando es adulta y esta en el final de
+                                    su
+                                    desarrollo .Luego de la floracion , la planta muere dejando "hijos" a sus
+                                    lados. La
                                     cantidad de "hijos" que da por planta varia entre 2 a 7 .
                                 </p>
-                                <p>Racimo largo de hasta 40 cm de alto con muchas flores amarillas , chicas y nada
+                                <p>Racimo largo de hasta 40 cm de alto con muchas flores amarillas , chicas y
+                                    nada
                                     vistosas </p>
 
                             </article>
@@ -250,12 +276,15 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se realiza todo el año de preferencia entre comienzos de la primavera a otoño, la
+                                <p>Se realiza todo el año de preferencia entre comienzos de la primavera a
+                                    otoño, la
                                     única razón para trasplantar
                                     la
-                                    planta sería porque una maceta más grande proporcionaría un entorno más estable para
+                                    planta sería porque una maceta más grande proporcionaría un entorno más
+                                    estable para
                                     las
-                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de la
+                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de
+                                    la
                                     maceta.
                                 </p>
                             </article>
@@ -267,7 +296,8 @@
                                 <p>En Exterior : El sol directo hace sus hojas mas firmes y brillosas pero a
                                     temperaturas muy altas la puede perjudicar.</p>
                                 <p>No se recomienda el sol directo en verano</p>
-                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se debe
+                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se
+                                    debe
                                     complementar
                                     con iluminacion artificial.</p>
                                 <p>Ante falta de luz , sus hojas suelen ser mas largas y debiles . Se doblaran
@@ -277,9 +307,11 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas usado es
+                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas
+                                    usado es
                                     una
-                                    mezcla de TURBA RUBIA y PERLITA o MUSGO DE SPHAGNUM y PERLITA , en proporciones
+                                    mezcla de TURBA RUBIA y PERLITA o MUSGO DE SPHAGNUM y PERLITA , en
+                                    proporciones
                                     50/50,60/40 o 70/30</p>
                                 <p>Se obtiene mejores resultados en musgo de sphagnum </p>
                             </article>
@@ -292,9 +324,11 @@
                             <h4>Alimentacion</h4>
                             <p>Se alimenta de cualquier insecto que entre en sus trampas .
                                 No
-                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos y
+                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos
+                                y
                                 obtiene
-                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean hacerlo nada
+                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean
+                                hacerlo nada
                                 se
                                 los impide .</p>
                         </div>
@@ -329,7 +363,8 @@
                         <div class="cuidados" id="habitat">
                             <article>
                                 <h4>Habitat Natural</h4>
-                                <p>Crece Naturalmente en : Carolina del Norte y Carolina del Sur, en el sureste de los
+                                <p>Crece Naturalmente en : Carolina del Norte y Carolina del Sur, en el sureste
+                                    de los
                                     Estados
                                     Unidos</p>
                                 <p>Se desarrolla en entornos pobres en nitrógeno, como pantanos y humedales ,
@@ -343,12 +378,16 @@
                                 <h4>Descripcion</h4>
                                 <p>La Dionaea muscipula tiene hojas modificadas que forman trampas en forma de
                                     "boca" o "mandíbulas". Estas trampas están equipadas con dientes (cilios) en
-                                    los bordes, que ayudan a atrapar y mantener a los insectos en su interior.</p>
-                                <p>Existe solo una especie pero gran variedad de Cultivares ,dichos cultivares presentan
-                                    caracteristicas unicas como difernte color , tamaño , forma de trampa , forma de
+                                    los bordes, que ayudan a atrapar y mantener a los insectos en su interior.
+                                </p>
+                                <p>Existe solo una especie pero gran variedad de Cultivares ,dichos cultivares
+                                    presentan
+                                    caracteristicas unicas como difernte color , tamaño , forma de trampa ,
+                                    forma de
                                     dientes(cilios) o falta de ellos etc .</p>
                                 <p>Estos maravillosos cultivares solo se reproducen por divicion y por eso su
-                                    reproduccion puede ser mas lenta . El mas conocido es la B52 cuyas trampas son las
+                                    reproduccion puede ser mas lenta . El mas conocido es la B52 cuyas trampas
+                                    son las
                                     mas grandes</p>
 
                             </article>
@@ -361,39 +400,47 @@
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Metodo de Captura</h4>
-                            <p>Su trampa se activa y cierra en menos de un segundo cuando un insecto pase por ella , una
+                            <p>Su trampa se activa y cierra en menos de un segundo cuando un insecto pase por
+                                ella , una
                                 vez
-                                absorbidos los nutrientes vuelve a abrir o muere segun la antiguedad de la hoja o tamaño
+                                absorbidos los nutrientes vuelve a abrir o muere segun la antiguedad de la hoja
+                                o tamaño
                                 del
                                 insecto</p>
                         </div>
                         <div class="cuidados" id="temperatura">
                             <h4>Temperatura</h4>
-                            <p>Tolera temperaturas de -0º a los 40º ,siendo en epoca de crecimiento una temperatura
+                            <p>Tolera temperaturas de -0º a los 40º ,siendo en epoca de crecimiento una
+                                temperatura
                                 ideal
                                 para su crecimiento entre los 20 y 25º</p>
-                            <p>Tener en cuenta que en epocas calurosas deben regar adecuadamente y evitar dejarla sin
+                            <p>Tener en cuenta que en epocas calurosas deben regar adecuadamente y evitar
+                                dejarla sin
                                 agua
                             </p>
                             <p>Superados los 40º es mejor tenerla fuera del sol directo </p>
                         </div>
                         <div class="cuidados" id="humedad">
                             <h4>Humedad</h4>
-                            <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre el 40%
+                            <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre
+                                el 40%
                                 y 80%
                             </P>
                         </div>
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo Con agua destilada o de lluvia . LLene la bandeja con 1 a 2 cm de agua para
+                                <p>Solo Con agua destilada o de lluvia . LLene la bandeja con 1 a 2 cm de agua
+                                    para
                                     macetas
                                     chicas , en macetas mas grandes aumentar un poco mas la cantidad </p>
                                 <p>EL riego cambia segun la epoca del año </p>
                                 <p>En Primavera/Verano :
-                                    Se aconseja mantener el suelo siempre humedo con agua en la bandeja, podes dejar la
+                                    Se aconseja mantener el suelo siempre humedo con agua en la bandeja, podes
+                                    dejar la
                                     bandeja
-                                    seca si el sustrato esta humedo pero no dejar que se seque por completo .En esta
+                                    seca si el sustrato esta humedo pero no dejar que se seque por completo .En
+                                    esta
                                     época
                                     las
                                     plantas están
@@ -404,7 +451,8 @@
                                     necesario.
                                     Tener
                                     en constante
-                                    observación de que el sustrato se seque un poco antes de regar , así evitamos que
+                                    observación de que el sustrato se seque un poco antes de regar , así
+                                    evitamos que
                                     nuestras
                                     plantas se pudran
                                     o se llenen de hongos</p>
@@ -413,16 +461,21 @@
                         <div class="cuidados" id="Floracion">
                             <article>
                                 <h4>Floracion</h4>
-                                <p>Luego de los 3 a 4 años de edad la planta florece a comienzos de primavera . Esto
+                                <p>Luego de los 3 a 4 años de edad la planta florece a comienzos de primavera .
+                                    Esto
                                     debilita
-                                    mucho la planta incluso puede llegar a morir si no tiene la fuerza necesaria .Si la
+                                    mucho la planta incluso puede llegar a morir si no tiene la fuerza necesaria
+                                    .Si la
                                     flor
-                                    afecta negativamente el crecimiento puede cortar la flor para evitar el strees que
+                                    afecta negativamente el crecimiento puede cortar la flor para evitar el
+                                    strees que
                                     produce
                                 </p>
-                                <p>Las flores son chicas , de color blanco y se encuentran al final de en un tallo largo
+                                <p>Las flores son chicas , de color blanco y se encuentran al final de en un
+                                    tallo largo
                                     que se eleva sobre la roseta de
-                                    trampas.Suele medir un maximo de 25 cm de alto. Las flores no son muy vistosas y
+                                    trampas.Suele medir un maximo de 25 cm de alto. Las flores no son muy
+                                    vistosas y
                                     generalmente se desarrollan en primavera .
                                 </p>
                             </article>
@@ -430,11 +483,14 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se realiza en invierno o a comienzos de la primavera, la única razón para trasplantar
+                                <p>Se realiza en invierno o a comienzos de la primavera, la única razón para
+                                    trasplantar
                                     la
-                                    planta sería porque una maceta más grande proporcionaría un entorno más estable para
+                                    planta sería porque una maceta más grande proporcionaría un entorno más
+                                    estable para
                                     las
-                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de la
+                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de
+                                    la
                                     maceta.
                                 </p>
                             </article>
@@ -443,7 +499,8 @@
                             <article>
                                 <h4>Iluminacion :</h4>
                                 <p>En Exterior : Requiere de 4 hs a 8 hs de luz solar directa .</p>
-                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se debe
+                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se
+                                    debe
                                     complementar
                                     con iluminacion artificial.</p>
                             </article>
@@ -451,40 +508,49 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas usado es
+                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas
+                                    usado es
                                     una
-                                    mezcla de TURBA RUBIA y PERLITA o MUSGO DE SPHAGNUM y PERLITA , en proporciones
+                                    mezcla de TURBA RUBIA y PERLITA o MUSGO DE SPHAGNUM y PERLITA , en
+                                    proporciones
                                     50/50,60/40 o 70/30</p>
                             </article>
                         </div>
                         <div class="cuidados" id="hibernacion">
                             <h4>Hibernacion</h4>
-                            <p>Hiberna a mediados de Otoño hasta principìos de Primavera .Durante este periodo la planta
-                                comienza a secar sus trampas y reducir su tamaño para guardar energias . Al llegar la
+                            <p>Hiberna a mediados de Otoño hasta principìos de Primavera .Durante este periodo
+                                la planta
+                                comienza a secar sus trampas y reducir su tamaño para guardar energias . Al
+                                llegar la
                                 primavera la planta volverá a renacer poco a
                                 poco. Es importante controlar el riego para evitar hongos </p>
                         </div>
                         <div class="cuidados" id="alimentacion">
                             <h4>Alimentacion</h4>
-                            <p>Se alimenta de cualquier insecto que entre en sus trampas , solo digiere insectos vivos .
+                            <p>Se alimenta de cualquier insecto que entre en sus trampas , solo digiere insectos
+                                vivos .
                                 No
-                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos y
+                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos
+                                y
                                 obtiene
-                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean hacerlo nada
+                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean
+                                hacerlo nada
                                 se
-                                los impide . Una vez digerido el insecto la trampa volvera a abrir o morira segun su
+                                los impide . Una vez digerido el insecto la trampa volvera a abrir o morira
+                                segun su
                                 tiempo
                                 de vida lo que dara inicio a una trampa nueva </p>
                         </div>
                     </div>
                     <div class="imagenesEspecie">
                         <ul>
-                            <li><img src="Imagenes/Plantas/dionaea/dionaea_conMosca.jpg" alt="dionaea_conMosca">Trampa
-                                de Venus con mosca digerida</li>
+                            <li><img src="Imagenes/Plantas/dionaea/dionaea_conMosca.jpg" alt="dionaea_conMosca">
+                                <p>Trampa de Venus con mosca digerida</p>
+                            </li>
                             <li><img src="Imagenes/Plantas/dionaea/dionaea_bohemianGarnet.jpg"
-                                    alt="dionaea_bohemianGarnet">Dionaea Bohemian Garnet</li>
+                                    alt="dionaea_bohemianGarnet"><p>Dionaea Bohemian Garnet</p></li>
                             <li><img src="Imagenes/Plantas/dionaea/dionaea_bristletooth.jpg"
-                                    alt="dionaea_bristletooth">Dionaea Bristletooth</li>
+                                    alt="dionaea_bristletooth"><p>Dionaea Bristletooth</p></li>
                         </ul>
                     </div>
                 </div>
@@ -493,7 +559,7 @@
             <!--DROSERA-->
             <section class="especie" id="drosera">
 
-                <h2>Drosera</h2>
+                <h2 id="introduction" class="section scrollspy">Drosera</h2>
                 <div class="contenedorEspecie">
                     <div class="datosEspecie">
                         <div class="cuidados" id="habitat">
@@ -509,8 +575,10 @@
                         <div class="cuidados" id="descripcion">
                             <article>
                                 <h4>Descripción</h4>
-                                <p>Crece Naturalmente en: Diversas partes de todo el mundo, incluso Argentina.</p>
-                                <p>Entorno: Se desarrolla en entornos pobres en nitrógeno, como pantanos y humedales.
+                                <p>Crece Naturalmente en: Diversas partes de todo el mundo, incluso Argentina.
+                                </p>
+                                <p>Entorno: Se desarrolla en entornos pobres en nitrógeno, como pantanos y
+                                    humedales.
                                 </p>
 
                             </article>
@@ -521,17 +589,20 @@
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Método de Captura</h4>
-                            <p>Las hojas tienen tentáculos glandulares que segregan un líquido pegajoso para atrapar
+                            <p>Las hojas tienen tentáculos glandulares que segregan un líquido pegajoso para
+                                atrapar
                                 insectos.
                             </p>
                             <p>La hoja se enrolla lentamente sobre la presa y luego vuelve a su lugar </p>
                         </div>
                         <div class="cuidados" id="temperatura">
                             <h4>Temperatura</h4>
-                            <p>Tolera temperaturas de -0º a los 40º ,siendo en epoca de crecimiento una temperatura
+                            <p>Tolera temperaturas de -0º a los 40º ,siendo en epoca de crecimiento una
+                                temperatura
                                 ideal
                                 para su crecimiento entre los 20 y 25º</p>
-                            <p>Tener en cuenta que en epocas calurosas deben regar adecuadamente y evitar dejarla sin
+                            <p>Tener en cuenta que en epocas calurosas deben regar adecuadamente y evitar
+                                dejarla sin
                                 agua
                             </p>
                             <p>La temperatura que toleran depende de la variedad</p>
@@ -539,22 +610,28 @@
                         </div>
                         <div class="cuidados" id="humedad">
                             <h4>Humedad</h4>
-                            <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre el 50%
+                            <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre
+                                el 50%
                                 y 80%
                             </P>
                         </div>
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo se debe utilizar agua destilada o de lluvia. Llenar la bandeja con 1 a 2 cm de
+                                <p>Solo se debe utilizar agua destilada o de lluvia. Llenar la bandeja con 1 a 2
+                                    cm de
                                     agua para
-                                    macetas pequeñas; en macetas más grandes, aumentar un poco más la cantidad.</p>
+                                    macetas pequeñas; en macetas más grandes, aumentar un poco más la cantidad.
+                                </p>
                                 <p>El riego cambia según la época del año:</p>
-                                <p>En Primavera/Verano: Mantener el suelo siempre húmedo con 1 a 2 cm de agua en la
+                                <p>En Primavera/Verano: Mantener el suelo siempre húmedo con 1 a 2 cm de agua en
+                                    la
                                     bandeja.</p>
-                                <p>En Otoño/Invierno: Se puede volver a llenar la bandeja cuando se acabe el agua y
+                                <p>En Otoño/Invierno: Se puede volver a llenar la bandeja cuando se acabe el
+                                    agua y
                                     dejar un
-                                    tiempo secando si es necesario. Observar que el sustrato se seque un poco antes de
+                                    tiempo secando si es necesario. Observar que el sustrato se seque un poco
+                                    antes de
                                     regar
                                     para evitar pudriciones o aparición de hongos.</p>
                             </article>
@@ -570,11 +647,13 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se realiza, en su mayoría, durante todo el año, de preferencia con temperaturas
+                                <p>Se realiza, en su mayoría, durante todo el año, de preferencia con
+                                    temperaturas
                                     mayores a
                                     15º. La única razón para trasplantar sería porque una maceta más grande
                                     proporcionaría un
-                                    entorno más estable para las raíces o porque el punto de crecimiento ha llegado al
+                                    entorno más estable para las raíces o porque el punto de crecimiento ha
+                                    llegado al
                                     borde de
                                     la maceta.</p>
                             </article>
@@ -583,7 +662,8 @@
                         <div class="cuidados" id="iluminacion">
                             <article>
                                 <h4>Iluminación</h4>
-                                <p>Exterior: Requiere luz indirecta; algunas variedades soportan la luz solar directa.
+                                <p>Exterior: Requiere luz indirecta; algunas variedades soportan la luz solar
+                                    directa.
                                 </p>
                                 <p>Interior: Colocar junto a una ventana que reciba mucha luz. Si es necesario,
                                     complementar con
@@ -594,26 +674,32 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Necesita tierra ácida y sin nutrientes. Los sustratos más usados son una mezcla de
+                                <p>Necesita tierra ácida y sin nutrientes. Los sustratos más usados son una
+                                    mezcla de
                                     turba
-                                    rubia y perlita o musgo de sphagnum y perlita, en proporciones 50/50, 60/40 o 70/30.
+                                    rubia y perlita o musgo de sphagnum y perlita, en proporciones 50/50, 60/40
+                                    o 70/30.
                                 </p>
                             </article>
                         </div>
 
                         <div class="cuidados" id="hibernacion">
                             <h4>Hibernación</h4>
-                            <p>Solo algunas variedades lo hacen (Filiformis, binata, anglica, intermedia y más). Hiberna
+                            <p>Solo algunas variedades lo hacen (Filiformis, binata, anglica, intermedia y más).
+                                Hiberna
                                 desde
                                 mediados de otoño hasta principios de primavera. Durante este período, la planta
                                 comienza a
-                                secar sus trampas y reducir su tamaño para conservar energía formando hibernáculos. En
-                                primavera, renace poco a poco. Es importante controlar el riego para evitar hongos.</p>
+                                secar sus trampas y reducir su tamaño para conservar energía formando
+                                hibernáculos. En
+                                primavera, renace poco a poco. Es importante controlar el riego para evitar
+                                hongos.</p>
                         </div>
 
                         <div class="cuidados" id="alimentacion">
                             <h4>Alimentación</h4>
-                            <p>Se alimenta de cualquier insecto que entre en sus trampas. No requiere alimentación
+                            <p>Se alimenta de cualquier insecto que entre en sus trampas. No requiere
+                                alimentación
                                 manual,
                                 aunque se puede hacer si se desea.</p>
                         </div>
@@ -645,7 +731,8 @@
                         <div class="cuidados" id="habitat">
                             <article>
                                 <h4>Habitat Natural</h4>
-                                <p>Crece Naturalmente en: Australia ,en la region Occidental y del norte.Otras pueden
+                                <p>Crece Naturalmente en: Australia ,en la region Occidental y del norte.Otras
+                                    pueden
                                     encontrarse en el sudeste de Asia</p>
                                 <p>Entorno: Se desarrollan en una variedad de habitats,desde bosques humedos y
                                     matorrales hasta areas arenosas y abiertas </p>
@@ -655,60 +742,76 @@
                         <div class="cuidados" id="descripcion">
                             <article>
                                 <h4>Descripción</h4>
-                                <p>Es una planta de porte bajo y tapizante de suelo Crecen en rosetas con abundante
+                                <p>Es una planta de porte bajo y tapizante de suelo Crecen en rosetas con
+                                    abundante
                                     floracion </p>
-                                <p>Era considerada una <strong>Protocarnivora</strong> pero luego de varios estudios se
-                                    condidero esta especie como <strong>Carnivora</strong> cumpliendo la funcion de
+                                <p>Era considerada una <strong>Protocarnivora</strong> pero luego de varios
+                                    estudios se
+                                    condidero esta especie como <strong>Carnivora</strong> cumpliendo la funcion
+                                    de
                                     poder digerir a sus presas y obtener los nutrientes necesarios</p>
                             </article>
                         </div>
                         <div class="cuidados" id="tamaño">
                             <h4>Tamaño</h4>
-                            <p>Tamaño máximo: Aproximadamente 10 cm de diámetro y poca altura, pero forma matas densas
+                            <p>Tamaño máximo: Aproximadamente 10 cm de diámetro y poca altura, pero forma matas
+                                densas
                                 que
                                 tapizan la superficie en poco tiempo.</p>
                         </div>
 
                         <div class="cuidados" id="captura">
                             <h4>Método de Captura</h4>
-                            <p>Captura insectos utilizando un rápido mecanismo de "martillo”. Cuando un insecto toca los
+                            <p>Captura insectos utilizando un rápido mecanismo de "martillo”. Cuando un insecto
+                                toca los
                                 pelos
-                                sensibles de la flor, el estilo de la planta se mueve rápidamente, golpeando al insecto
+                                sensibles de la flor, el estilo de la planta se mueve rápidamente, golpeando al
+                                insecto
                                 hacia
-                                las glándulas pegajosas en la base de la flor. Allí, el insecto queda atrapado y es
+                                las glándulas pegajosas en la base de la flor. Allí, el insecto queda atrapado y
+                                es
                                 digerido
                                 lentamente por la planta.</p>
                         </div>
 
                         <div class="cuidados" id="temperatura">
                             <h4>Temperatura</h4>
-                            <p>Tolera temperaturas moderadas. Prefiere un rango de temperatura entre 15°C y 25°C, pero
+                            <p>Tolera temperaturas moderadas. Prefiere un rango de temperatura entre 15°C y
+                                25°C, pero
                                 puede
-                                soportar temperaturas ligeramente más bajas o más altas (0°C a 40°C), siempre que no sea
+                                soportar temperaturas ligeramente más bajas o más altas (0°C a 40°C), siempre
+                                que no sea
                                 por
                                 períodos prolongados.</p>
                         </div>
 
                         <div class="cuidados" id="humedad">
                             <h4>Humedad</h4>
-                            <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre el 40%
+                            <p>Viven en ambientes humedos pero en su mayoria toleran una humedad ambiental entre
+                                el 40%
                                 y 80%
                             </P>
                         </div>
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo se debe utilizar agua destilada o de lluvia. Llenar la bandeja con 1 a 2 cm de
+                                <p>Solo se debe utilizar agua destilada o de lluvia. Llenar la bandeja con 1 a 2
+                                    cm de
                                     agua para
-                                    macetas pequeñas; en macetas más grandes, aumentar un poco más la cantidad.</p>
-                                <p>El riego cambia según la época del año:</p>
-                                <p>En Primavera/Verano: Mantener el suelo siempre húmedo con agua en la bandeja. Se
-                                    puede dejar
-                                    la bandeja seca si el sustrato está húmedo, pero no dejar que se seque por completo.
+                                    macetas pequeñas; en macetas más grandes, aumentar un poco más la cantidad.
                                 </p>
-                                <p>En Otoño/Invierno: Regar cuando se acabe el agua de la bandeja y dejar un tiempo
+                                <p>El riego cambia según la época del año:</p>
+                                <p>En Primavera/Verano: Mantener el suelo siempre húmedo con agua en la bandeja.
+                                    Se
+                                    puede dejar
+                                    la bandeja seca si el sustrato está húmedo, pero no dejar que se seque por
+                                    completo.
+                                </p>
+                                <p>En Otoño/Invierno: Regar cuando se acabe el agua de la bandeja y dejar un
+                                    tiempo
                                     secando si
-                                    es necesario. Observar que el sustrato se seque un poco antes de regar para evitar
+                                    es necesario. Observar que el sustrato se seque un poco antes de regar para
+                                    evitar
                                     pudriciones o aparición de hongos.</p>
                             </article>
                         </div>
@@ -716,7 +819,8 @@
                         <div class="cuidados" id="floracion">
                             <article>
                                 <h4>Floración</h4>
-                                <p>Florece en abundancia a comienzos de primavera. Las flores son pequeñas y rosadas,
+                                <p>Florece en abundancia a comienzos de primavera. Las flores son pequeñas y
+                                    rosadas,
                                     situadas
                                     en tallos delgados.</p>
                             </article>
@@ -725,9 +829,11 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se realiza en cualquier época. La única razón para trasplantar sería porque una
+                                <p>Se realiza en cualquier época. La única razón para trasplantar sería porque
+                                    una
                                     maceta más
-                                    grande proporcionaría un entorno más estable para las raíces o porque el punto de
+                                    grande proporcionaría un entorno más estable para las raíces o porque el
+                                    punto de
                                     crecimiento ha llegado al borde de la maceta.</p>
                             </article>
                         </div>
@@ -735,10 +841,12 @@
                         <div class="cuidados" id="iluminacion">
                             <article>
                                 <h4>Iluminación</h4>
-                                <p>En Exterior: Requiere mucha luz, tolerando incluso el sol directo. La iluminación
+                                <p>En Exterior: Requiere mucha luz, tolerando incluso el sol directo. La
+                                    iluminación
                                     alta
                                     aumenta la floración.</p>
-                                <p>En Interior: Colocar junto a una ventana que reciba mucha luz. Si es necesario,
+                                <p>En Interior: Colocar junto a una ventana que reciba mucha luz. Si es
+                                    necesario,
                                     complementar
                                     con iluminación artificial.</p>
                             </article>
@@ -747,9 +855,11 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Necesita tierra ácida y sin nutrientes. Los sustratos más usados son una mezcla de
+                                <p>Necesita tierra ácida y sin nutrientes. Los sustratos más usados son una
+                                    mezcla de
                                     turba
-                                    rubia y perlita o musgo de sphagnum y perlita, en proporciones 50/50, 60/40 o 70/30.
+                                    rubia y perlita o musgo de sphagnum y perlita, en proporciones 50/50, 60/40
+                                    o 70/30.
                                 </p>
                             </article>
                         </div>
@@ -761,7 +871,8 @@
 
                         <div class="cuidados" id="alimentacion">
                             <h4>Alimentación</h4>
-                            <p>Se alimenta de cualquier insecto que entre en sus trampas. No requiere alimentación
+                            <p>Se alimenta de cualquier insecto que entre en sus trampas. No requiere
+                                alimentación
                                 manual.</p>
                         </div>
                     </div>
@@ -794,7 +905,8 @@
                                 <h4>Habitat Natural</h4>
                                 <p>Crece Naturalmente en los pantanos y
                                     ciénagas del sureste y noreste de de los Estados Unidos y Canadá.</p>
-                                <p>Se desarrolla en entornos pobres en nitrógeno, como pantanos y humedales en hábitats
+                                <p>Se desarrolla en entornos pobres en nitrógeno, como pantanos y humedales en
+                                    hábitats
                                     con
                                     alta exposición a la luz solar.
                                 </p>
@@ -804,10 +916,13 @@
                         <div class="cuidados" id="descripcion">
                             <article>
                                 <h4>Descripción</h4>
-                                <p>Tienen hojas modificadas en forma de jarros o trompetas, que están adaptadas para
-                                    capturar y digerir insectos. Estas jarras están rodeadas de un "capuchón" que ayuda
+                                <p>Tienen hojas modificadas en forma de jarros o trompetas, que están adaptadas
+                                    para
+                                    capturar y digerir insectos. Estas jarras están rodeadas de un "capuchón"
+                                    que ayuda
                                     a atraer y atrapar a las presas.</p>
-                                <p>Suelen llamarse trompetas por el sonido muy peculiar que generan los insectos al
+                                <p>Suelen llamarse trompetas por el sonido muy peculiar que generan los insectos
+                                    al
                                     intentar salir de las trampas
                                 </p>
                             </article>
@@ -815,16 +930,20 @@
                         <div class="cuidados" id="tamaño">
                             <h4>Tamaño</h4>
                             <p>Varia según la especie. En promedio, las jarras pueden medir
-                                entre 15 y 70 cm de largo. Algunas especies pueden crecer aún más, hasta 1 metro en
+                                entre 15 y 70 cm de largo. Algunas especies pueden crecer aún más, hasta 1 metro
+                                en
                                 casos excepcionales.</p>
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Método de Captura</h4>
-                            <p>Trampas en forma de jarra llenas de líquido digestivo. Las hojas atraen a los insectos
+                            <p>Trampas en forma de jarra llenas de líquido digestivo. Las hojas atraen a los
+                                insectos
                                 con su
-                                néctar y colores vivos. Una vez dentro, los insectos resbalan por las paredes lisas de
+                                néctar y colores vivos. Una vez dentro, los insectos resbalan por las paredes
+                                lisas de
                                 la jarra
-                                y caen en el líquido digestivo, donde son descompuestos y absorbidos por la planta.</p>
+                                y caen en el líquido digestivo, donde son descompuestos y absorbidos por la
+                                planta.</p>
                         </div>
                         <div class="cuidados" id="temperatura">
                             <article>
@@ -835,7 +954,8 @@
                         <div class="cuidados" id="humedad">
                             <article>
                                 <h4>Humedad</h4>
-                                <p>La humedad ambiental debe ser superior al 70% , pueden toleran un poco menos de
+                                <p>La humedad ambiental debe ser superior al 70% , pueden toleran un poco menos
+                                    de
                                     humedad pero esto podria afectar sus trampas</p>
                                 <p>En Buenos Aires se desarrollan perfectamente en exterior </p>
                             </article>
@@ -844,17 +964,23 @@
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo se debe utilizar agua destilada o de lluvia. Llenar la bandeja con 1 a 2 cm de
+                                <p>Solo se debe utilizar agua destilada o de lluvia. Llenar la bandeja con 1 a 2
+                                    cm de
                                     agua para
-                                    macetas pequeñas; en macetas más grandes, aumentar un poco más la cantidad.</p>
-                                <p>El riego cambia según la época del año:</p>
-                                <p>En Primavera/Verano: Mantener el suelo siempre húmedo con agua en la bandeja. Se
-                                    puede dejar
-                                    la bandeja seca si el sustrato está húmedo, pero no dejar que se seque por completo.
+                                    macetas pequeñas; en macetas más grandes, aumentar un poco más la cantidad.
                                 </p>
-                                <p>En Otoño/Invierno: Regar cuando se acabe el agua de la bandeja y dejar un tiempo
+                                <p>El riego cambia según la época del año:</p>
+                                <p>En Primavera/Verano: Mantener el suelo siempre húmedo con agua en la bandeja.
+                                    Se
+                                    puede dejar
+                                    la bandeja seca si el sustrato está húmedo, pero no dejar que se seque por
+                                    completo.
+                                </p>
+                                <p>En Otoño/Invierno: Regar cuando se acabe el agua de la bandeja y dejar un
+                                    tiempo
                                     secando si
-                                    es necesario. Observar que el sustrato se seque un poco antes de regar para evitar
+                                    es necesario. Observar que el sustrato se seque un poco antes de regar para
+                                    evitar
                                     pudriciones o aparición de hongos.</p>
                             </article>
                         </div>
@@ -862,7 +988,8 @@
                         <div class="cuidados" id="floracion">
                             <article>
                                 <h4>Floración</h4>
-                                <p>La planta florece luego de 3 a 4 años de edad, a comienzos de primavera. Las flores
+                                <p>La planta florece luego de 3 a 4 años de edad, a comienzos de primavera. Las
+                                    flores
                                     son
                                     grandes y coloridas con diversas alturas que maduran a los 3 meses.</p>
                             </article>
@@ -871,9 +998,11 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se realiza en invierno o a comienzos de la primavera. La única razón para trasplantar
+                                <p>Se realiza en invierno o a comienzos de la primavera. La única razón para
+                                    trasplantar
                                     sería
-                                    porque una maceta más grande proporcionaría un entorno más estable para las raíces o
+                                    porque una maceta más grande proporcionaría un entorno más estable para las
+                                    raíces o
                                     porque
                                     el punto de crecimiento ha llegado al borde de la maceta.</p>
                             </article>
@@ -883,7 +1012,8 @@
                         <div class="cuidados" id="iluminacion">
                             <article>
                                 <h4>Iluminación</h4>
-                                <p>Prefieren la iluminacion directa del sol,esto influye en el color de las trampas</p>
+                                <p>Prefieren la iluminacion directa del sol,esto influye en el color de las
+                                    trampas</p>
                                 <p>En Exterior: Requiere de 4 a 8 horas de luz solar directa.</p>
                                 <p>En Interior:Colocarla junto a una ventana que reciba mucha luz solar. Si es
                                     necesario,
@@ -897,25 +1027,30 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Necesita tierra ácida y sin nutrientes. Los sustratos más usados son una mezcla de
+                                <p>Necesita tierra ácida y sin nutrientes. Los sustratos más usados son una
+                                    mezcla de
                                     turba
-                                    rubia y perlita o musgo de sphagnum y perlita, en proporciones 50/50, 60/40 o 70/30.
+                                    rubia y perlita o musgo de sphagnum y perlita, en proporciones 50/50, 60/40
+                                    o 70/30.
                                 </p>
                             </article>
                         </div>
 
                         <div class="cuidados" id="hibernacion">
                             <h4>Hibernación</h4>
-                            <p>Hiberna desde mediados de otoño hasta principios de primavera. Durante este período, la
+                            <p>Hiberna desde mediados de otoño hasta principios de primavera. Durante este
+                                período, la
                                 planta
-                                comienza a secar sus trampas para conservar energía. En primavera, renace poco a poco.
+                                comienza a secar sus trampas para conservar energía. En primavera, renace poco a
+                                poco.
                                 Es
                                 importante controlar el riego para evitar hongos.</p>
                         </div>
 
                         <div class="cuidados" id="alimentacion">
                             <h4>Alimentación</h4>
-                            <p>Se alimenta de cualquier insecto que entre en sus trampas. No requiere alimentación
+                            <p>Se alimenta de cualquier insecto que entre en sus trampas. No requiere
+                                alimentación
                                 manual,
                                 aunque se puede hacer si se desea.</p>
                         </div>
@@ -948,10 +1083,13 @@
                         <div class="cuidados" id="habitat">
                             <article>
                                 <h4>Habitat Natural</h4>
-                                <p> Las Nepenthes se encuentran en regiones tropicales de Asia, incluyendo países como
-                                    Malasia, Indonesia, Tailandia, Filipinas, y Australia. También hay especies en
+                                <p> Las Nepenthes se encuentran en regiones tropicales de Asia, incluyendo
+                                    países como
+                                    Malasia, Indonesia, Tailandia, Filipinas, y Australia. También hay especies
+                                    en
                                     Madagascar y algunas islas del Océano Índico.</p>
-                                <p> Crece en una variedad de hábitats, desde zonas húmedas y pantanosas hasta áreas de
+                                <p> Crece en una variedad de hábitats, desde zonas húmedas y pantanosas hasta
+                                    áreas de
                                     alta montaña .</p>
                             </article>
                         </div>
@@ -959,13 +1097,17 @@
                             <article>
                                 <h4>Descripcion</h4>
 
-                                <p> Las Nepenthes son plantas carnívoras conocidas por sus hojas modificadas en forma de
-                                    jarro con una gran variedad de colores y formas. Estas estructuras están adaptadas
+                                <p> Las Nepenthes son plantas carnívoras conocidas por sus hojas modificadas en
+                                    forma de
+                                    jarro con una gran variedad de colores y formas. Estas estructuras están
+                                    adaptadas
                                     para capturar y digerir insectos
                                     y otros pequeños animales.</p>
                                 <p>Ademas son capaces de trepar y ganar altura gracias a sus zarcillos</p>
-                                <p>Se dividen en 3 categorias segun la region la altura en la que se encuentren :
-                                    Lowland - Intermedias -Higland .Existen muchos hibridos naturales y muchos mas
+                                <p>Se dividen en 3 categorias segun la region la altura en la que se encuentren
+                                    :
+                                    Lowland - Intermedias -Higland .Existen muchos hibridos naturales y muchos
+                                    mas
                                     producidos por cultivadores </p>
                                 <p>Las mas aptas para Argentina son las Intermedias y sus hibridos .</p>
 
@@ -976,14 +1118,17 @@
                             <h4>Tamaño</h4>
                             <p>Tamaño máximo: Varia dependiendo la variedad </p>
                             <p>Genera ramificaciones que se pueden extender por metros en algunas variedades</p>
-                            <p>El tamaño de sus trampas tambien varia , algunas llegan a los 30 cm de alto y son capaces
+                            <p>El tamaño de sus trampas tambien varia , algunas llegan a los 30 cm de alto y son
+                                capaces
                                 de digerir pequeños roedores</p>
 
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Metodo de Captura - pasiva</h4>
-                            <p> Los insectos son atraídos por néctar y se deslizan hacia el interior, donde caen en un
-                                líquido digestivo. Las paredes internas son resbaladizas, y las enzimas en el líquido
+                            <p> Los insectos son atraídos por néctar y se deslizan hacia el interior, donde caen
+                                en un
+                                líquido digestivo. Las paredes internas son resbaladizas, y las enzimas en el
+                                líquido
                                 descomponen los insectos, permitiendo que la planta absorba los nutrientes.</p>
                             <p>En un cultivo con alta humedad puede verse a simple vista las gotas de nectar que
                                 producen </p>
@@ -991,31 +1136,41 @@
                         <div class="cuidados" id="temperatura">
                             <article>
                                 <h4>Temperatura</h4>
-                                <p>Toleran desde los 10º hasta los 35ºC pero es importante conocer sobre la especie para
+                                <p>Toleran desde los 10º hasta los 35ºC pero es importante conocer sobre la
+                                    especie para
                                     darle la temperatura necesaria </p>
-                                <p><strong>Lowland :</strong>Necesita temperaturas que ronden entre los 20º a 35ºC
-                                    durante todo el año , una temperatura por debajo podria afectar la planta hasta su
+                                <p><strong>Lowland :</strong>Necesita temperaturas que ronden entre los 20º a
+                                    35ºC
+                                    durante todo el año , una temperatura por debajo podria afectar la planta
+                                    hasta su
                                     muerte </p>
                                 <p><strong>Intermedias :</strong>Toleran temperaturas entre los 15º y 30º .</p>
-                                <p><strong>Higland :</strong>Necesita temperaturas diurnas entre 20º a 25º y nocturas
+                                <p><strong>Higland :</strong>Necesita temperaturas diurnas entre 20º a 25º y
+                                    nocturas
                                     entre los 15º y 20º . </p>
-                                <p>Los requisitos estrictos en algunas especies de nepenthes hacen que sea necesaria una
-                                    climatizacion artificial para mantenernas con vida ,ademas de mantener una humedad
+                                <p>Los requisitos estrictos en algunas especies de nepenthes hacen que sea
+                                    necesaria una
+                                    climatizacion artificial para mantenernas con vida ,ademas de mantener una
+                                    humedad
                                     alta</p>
-                                <p>Existen hibridos muy resistentes al clima argentino como ventrata , ventricosa x
+                                <p>Existen hibridos muy resistentes al clima argentino como ventrata ,
+                                    ventricosa x
                                     khasiana y mas </p>
                             </article>
                         </div>
                         <div class="cuidados" id="humedad">
                             <article>
                                 <h4>Humedad</h4>
-                                <p>Viven en climas muy humedos. La humedad ambiental debe rondar entre 70% y 80% para un
+                                <p>Viven en climas muy humedos. La humedad ambiental debe rondar entre 70% y 80%
+                                    para un
                                     buen cultivo .</p>
                                 <p>Algunos hibridos toleran una humedad ambiental mas baja como la x Ventrata,
                                     Ventricosa x khasiana, Maxima y mas </p>
-                                <p>Usualmente se cultiva en invernaderos climatizados por su exigencia de cultivo</p>
+                                <p>Usualmente se cultiva en invernaderos climatizados por su exigencia de
+                                    cultivo</p>
                                 <p>Los requisitos de la humedad en algunas algunas Nepenthes hacen que sean muy
-                                    dificiles de cultivar , ademas sin la humedad necesaria no se produciran las trampas
+                                    dificiles de cultivar , ademas sin la humedad necesaria no se produciran las
+                                    trampas
                                     o saldran deformen </p>
                                 <p>Existen hibridos resistentes a una humedad mas baja </p>
                             </article>
@@ -1023,11 +1178,13 @@
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo Con agua destilada o de lluvia .Se recomienda regar directamente el sustrato sin
+                                <p>Solo Con agua destilada o de lluvia .Se recomienda regar directamente el
+                                    sustrato sin
                                     necesidad de bandeja o si se usa una bandeja , no dejar encharcada</p>
                                 <p>EL riego cambia segun la epoca del año </p>
                                 <p>En Primavera/Verano :
-                                    Se aconseja mantener el suelo siempre humedo , podes dejar una bandeja pero no es
+                                    Se aconseja mantener el suelo siempre humedo , podes dejar una bandeja pero
+                                    no es
                                     recomendable dejar agua mucho tiempo.
                                     No dejar que se seque por completo ,en esta
                                     época las
@@ -1035,10 +1192,12 @@
                                     en constante crecimiento y necesitan
                                     bastante agua .</p>
                                 <p>En Otoño/Invierno :
-                                    Solo basta con mantenerlo levemente humedo sin necesidad de una bandeja debajo
+                                    Solo basta con mantenerlo levemente humedo sin necesidad de una bandeja
+                                    debajo
                                     .Tener
                                     en constante
-                                    observación de que el sustrato se seque un poco antes de regar , así evitamos que
+                                    observación de que el sustrato se seque un poco antes de regar , así
+                                    evitamos que
                                     nuestras
                                     plantas se pudran
                                     o se llenen de hongos</p>
@@ -1047,14 +1206,19 @@
                         <div class="cuidados" id="Floracion">
                             <article>
                                 <h4>Floracion</h4>
-                                <p>Luego de los 3 a 4 años de edad la planta florece en cualquier epoca del año segun
-                                    las condiciones que tenga y duran muy poco tiempo . Suelen desprender un olor muy
+                                <p>Luego de los 3 a 4 años de edad la planta florece en cualquier epoca del año
+                                    segun
+                                    las condiciones que tenga y duran muy poco tiempo . Suelen desprender un
+                                    olor muy
                                     particular sobre todo los machos , no muy agradable para algunos
                                 </p>
-                                <p>Las Nepenthes producen flores pequeñas en inflorescencias alargadas que se elevan
-                                    sobre la roseta. Las flores pueden ser de color verde, amarillo, o rojo, dependiendo
+                                <p>Las Nepenthes producen flores pequeñas en inflorescencias alargadas que se
+                                    elevan
+                                    sobre la roseta. Las flores pueden ser de color verde, amarillo, o rojo,
+                                    dependiendo
                                     de la especie</p>
-                                <p>Cada planta puede tener solo una floracion masculina o femenina y necesita de otra
+                                <p>Cada planta puede tener solo una floracion masculina o femenina y necesita de
+                                    otra
                                     planta para poder polinizarse </p>
 
                             </article>
@@ -1065,9 +1229,11 @@
                                 <p>De preferencia realizar un trasplante entre primavera y verano.</p>
                                 <p>La única razón para trasplantar
                                     la
-                                    planta sería porque una maceta más grande proporcionaría un entorno más estable para
+                                    planta sería porque una maceta más grande proporcionaría un entorno más
+                                    estable para
                                     las
-                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de la
+                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de
+                                    la
                                     maceta.</p>
                             </article>
                         </div>
@@ -1075,11 +1241,15 @@
                         <div class="cuidados" id="Iluminacion">
                             <article>
                                 <h4>Iluminacion :</h4>
-                                <p>Requieren mucha luz indirecta o luz solar filtrada. Las especies de alta montaña
+                                <p>Requieren mucha luz indirecta o luz solar filtrada. Las especies de alta
+                                    montaña
                                     pueden necesitar menos luz directa que las especies de selva tropical.</p>
-                                <p>En Exterior : ALgunas toleran el sol directo , deben estar aclimatadas o se debe
-                                    aclimatar progresivamente .Se recomienda una iluminacion indirecta muy luminosa </p>
-                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se debe
+                                <p>En Exterior : ALgunas toleran el sol directo , deben estar aclimatadas o se
+                                    debe
+                                    aclimatar progresivamente .Se recomienda una iluminacion indirecta muy
+                                    luminosa </p>
+                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se
+                                    debe
                                     complementar
                                     con iluminacion artificial.</p>
 
@@ -1088,11 +1258,14 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas usado
+                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas
+                                    usado
                                     es una
-                                    mezcla de TURBA RUBIA y PERLITA o MUSGO DE SPHAGNUM y PERLITA , en proporciones
+                                    mezcla de TURBA RUBIA y PERLITA o MUSGO DE SPHAGNUM y PERLITA , en
+                                    proporciones
                                     50/50,60/40 o 70/30</p>
-                                <p>La mejor opcion suele ser musgo de sphagnum y perlita ,se pude agregar corteza de
+                                <p>La mejor opcion suele ser musgo de sphagnum y perlita ,se pude agregar
+                                    corteza de
                                     pino o piedra pomez para el drenaje </p>
                             </article>
                         </div>
@@ -1102,13 +1275,17 @@
                         </div>
                         <div class="cuidados" id="alimentacion">
                             <h4>Alimentacion</h4>
-                            <p>Se alimenta de cualquier insecto o pequeños animales que entren en sus trampas .No
-                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos y
+                            <p>Se alimenta de cualquier insecto o pequeños animales que entren en sus trampas
+                                .No
+                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos
+                                y
                                 obtiene
-                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean hacerlo
+                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean
+                                hacerlo
                                 nada se
                                 los impide .</p>
-                            <p>Si bien la mayoria tienen un tamaño para digerir caracoles o lagartijas , el olor que
+                            <p>Si bien la mayoria tienen un tamaño para digerir caracoles o lagartijas , el olor
+                                que
                                 sentiran a medida que se disuelva no sera nada agradable</p>
                             <p>Usualmente , las hormigas caen en sus trampas por el nectar que desprenden </p>
                         </div>
@@ -1142,7 +1319,8 @@
                                 <h4>Habitat Natural</h4>
                                 <p> En diversas partes del mundo incluso en Argentina , siendo Mexico donde mas
                                     variedades se encuentran</p>
-                                <p> Crece en una variedad de hábitats, desde zonas húmedas y pantanosas hasta áreas de
+                                <p> Crece en una variedad de hábitats, desde zonas húmedas y pantanosas hasta
+                                    áreas de
                                     alta montaña .</p>
                                 <p>Incluso pueden crecer en arboles o entre rocas y musgo.</p>
 
@@ -1161,23 +1339,29 @@
                         </div>
                         <div class="cuidados" id="tamaño">
                             <h4>Tamaño</h4>
-                            <p>Tamaño máximo: Suelen ser plantas en forma de roseta de hasta 10 cm de diametro </p>
-                            <p>La pinguicula Gigantea excede este tamaño y es la mas grande de esta especie teniendo
+                            <p>Tamaño máximo: Suelen ser plantas en forma de roseta de hasta 10 cm de diametro
+                            </p>
+                            <p>La pinguicula Gigantea excede este tamaño y es la mas grande de esta especie
+                                teniendo
                                 aprox unos 25 cm maximo </p>
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Metodo de Captura - pasivo</h4>
 
-                            <p>Cubiertas de una sustancia pegajosa que atrapa a los pequeños insectos. Las glándulas
-                                presentes en las hojas secretan enzimas que digieren a los insectos, permitiendo que la
+                            <p>Cubiertas de una sustancia pegajosa que atrapa a los pequeños insectos. Las
+                                glándulas
+                                presentes en las hojas secretan enzimas que digieren a los insectos, permitiendo
+                                que la
                                 planta absorba los nutrientes resultantes.</p>
                         </div>
                         <div class="cuidados" id="temperatura">
                             <article>
                                 <h4>Temperatura</h4>
                                 <p>Varía según la especie : Las especies tropicales
-                                    requieren temperaturas más cálidas, generalmente entre 15°C y 30°C, mientras que las
-                                    especies templadas pueden soportar temperaturas más frías, incluso cerca de 0°C
+                                    requieren temperaturas más cálidas, generalmente entre 15°C y 30°C, mientras
+                                    que las
+                                    especies templadas pueden soportar temperaturas más frías, incluso cerca de
+                                    0°C
                                     durante el invierno</p>
                                 <p>Lo ideal es entre 20 y 25 en epoca de crecimento</p>
                                 <p>Toleran hasta los 35º , debiendo proteger las plantas del calor en verano</p>
@@ -1187,8 +1371,10 @@
                         <div class="cuidados" id="humedad">
                             <article>
                                 <h4>Humedad</h4>
-                                <p>Pueden tolerar una humedad del 50 al 70% , una humedad muy alta,riego excesivo y poca
-                                    ventilacion de seguro van a pudrir la planta . Se debe controlar la ventilacion y
+                                <p>Pueden tolerar una humedad del 50 al 70% , una humedad muy alta,riego
+                                    excesivo y poca
+                                    ventilacion de seguro van a pudrir la planta . Se debe controlar la
+                                    ventilacion y
                                     riego segun la humedad que tengan en su cercania </p>
                             </article>
 
@@ -1196,17 +1382,21 @@
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Solo Con agua destilada o de lluvia . Llene la bandeja con 1 a 2 cm de agua para
+                                <p>Solo Con agua destilada o de lluvia . Llene la bandeja con 1 a 2 cm de agua
+                                    para
                                     macetas
                                     chicas , en macetas mas grandes aumentar un poco mas la cantidad </p>
                                 <p>EL riego cambia segun la epoca del año </p>
-                                <p>Se pudren facil por exceso de riego , lo mejor es mantener el sustrato ligeramente
+                                <p>Se pudren facil por exceso de riego , lo mejor es mantener el sustrato
+                                    ligeramente
                                     humedo
                                 </p>
                                 <p>En Primavera/Verano :
-                                    Se aconseja mantener el suelo siempre humedo con agua en la bandeja, podes dejar la
+                                    Se aconseja mantener el suelo siempre humedo con agua en la bandeja, podes
+                                    dejar la
                                     bandeja
-                                    seca si el sustrato esta humedo pero no dejar que se seque por completo .En esta
+                                    seca si el sustrato esta humedo pero no dejar que se seque por completo .En
+                                    esta
                                     época las
                                     plantas están
                                     en constante crecimiento y necesitan
@@ -1215,7 +1405,8 @@
                                     Regar cuando se acabe el agua de la bandeja y dejar un tiempo secando si es
                                     necesario. Tener
                                     en constante
-                                    observación de que el sustrato se seque un poco antes de regar , así evitamos que
+                                    observación de que el sustrato se seque un poco antes de regar , así
+                                    evitamos que
                                     nuestras
                                     plantas se pudran
                                     o se llenen de hongos</p>
@@ -1224,7 +1415,8 @@
                         <div class="cuidados" id="Floracion">
                             <article>
                                 <h4>Floracion</h4>
-                                <p>Florece a comienzos de primavera hasta principios de invierno segun las condiciones.
+                                <p>Florece a comienzos de primavera hasta principios de invierno segun las
+                                    condiciones.
                                 </p>
                                 <p>Poseen flores de diferentes formas y colores , en su mayoria rosadas y otras
                                     blanco,azul, amarillo</p>
@@ -1233,11 +1425,14 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se realiza en invierno o a comienzos de la primavera, la única razón para trasplantar
+                                <p>Se realiza en invierno o a comienzos de la primavera, la única razón para
+                                    trasplantar
                                     la
-                                    planta sería porque una maceta más grande proporcionaría un entorno más estable para
+                                    planta sería porque una maceta más grande proporcionaría un entorno más
+                                    estable para
                                     las
-                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de la
+                                    raíces o porque el punto de crecimiento de la planta ha llegado al borde de
+                                    la
                                     maceta.</p>
                             </article>
                         </div>
@@ -1245,10 +1440,12 @@
                         <div class="cuidados" id="Iluminacion">
                             <article>
                                 <h4>Iluminacion :</h4>
-                                <p>En Exterior : Requiere mucha iluminacion indirecta ,puede tolerar el sol pero se
+                                <p>En Exterior : Requiere mucha iluminacion indirecta ,puede tolerar el sol pero
+                                    se
                                     corre riesgo
                                     de perder la planta si se descuida el riego .</p>
-                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se debe
+                                <p>En interior : Junto a una venta que reciba mucha luz y de ser necesario se
+                                    debe
                                     complementar
                                     con iluminacion artificial.</p>
                             </article>
@@ -1256,7 +1453,8 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas usado
+                                <p>Estas plantas necesitan una tierra acida y sin nutrientes . El sustrato mas
+                                    usado
                                     es una
                                     mezcla de TURBA RUBIA y PERLITA , en proporciones
                                     50/50,60/40 o 70/30</p>
@@ -1270,7 +1468,8 @@
                             <h4>Hibernacion</h4>
                             <p> Las especies
                                 tropicales no hibernan.</p>
-                            <p>Algunas Pinguiculas templadas entran en un estado de hibernación durante el invierno,
+                            <p>Algunas Pinguiculas templadas entran en un estado de hibernación durante el
+                                invierno,
                                 formando una roseta más pequeña y compacta con hojas no carnívoras.</p>
                             <p>En Otoño cambia sus hojas carnivoras a hojas no carnivoras , reduciendo su tamaño
                             </p>
@@ -1281,9 +1480,11 @@
                             <p>Se alimenta de cualquier insecto que entre en sus trampas ,usualmente mosquitos o
                                 insectos
                                 chicos . No
-                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos y
+                                requiere alimentacion manual ya que tiene la capacidad de atraer a los insectos
+                                y
                                 obtiene
-                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean hacerlo
+                                los nutrientes atraves de la fotosintesis como otras plantas pero si desean
+                                hacerlo
                                 nada se
                                 los impide .</p>
                             <p>Usualmente veras mosquitos y moscas de la fruta en sus hojas </p>
@@ -1318,11 +1519,13 @@
                         <div class="cuidados" id="habitat">
                             <article>
                                 <h4>Habitat Natural</h4>
-                                <p>Crece Naturalmente en todo el Mundo,incluso en Argentina.Se distribuyen en una
+                                <p>Crece Naturalmente en todo el Mundo,incluso en Argentina.Se distribuyen en
+                                    una
                                     variedad de entornos, desde acuáticos
                                     hasta
                                     terrestres</p>
-                                <p> Crece en entorno de áreas húmedas, pantanosas o bordes de cuerpos de agua, en suelos
+                                <p> Crece en entorno de áreas húmedas, pantanosas o bordes de cuerpos de agua,
+                                    en suelos
                                     muy
                                     pobres en
                                     nutrientes. </p>
@@ -1333,7 +1536,8 @@
                         <div class="cuidados" id="descripcion">
                             <article>
                                 <h4>Descripción</h4>
-                                <p>Usualmente son plantas de hojas chicas y tapizantes de suelo . Sus trampas estan en
+                                <p>Usualmente son plantas de hojas chicas y tapizantes de suelo . Sus trampas
+                                    estan en
                                     las raices</p>
                                 <p>Lo mas llamativo de esta especie es su floracion ganandose el apodo de "mini
                                     orquideas " por las multiples formas y colores que estas poseen</p>
@@ -1341,7 +1545,8 @@
                         </div>
                         <div class="cuidados" id="tamaño">
                             <h4>Tamaño</h4>
-                            <p>Tamaño máximo: Suelen ser plantas de hojas chicas , de pocos milimetros su mayoria</p>
+                            <p>Tamaño máximo: Suelen ser plantas de hojas chicas , de pocos milimetros su
+                                mayoria</p>
                             <p>Varía según la especie; algunas son diminutas, mientras que otras pueden cubrir
                                 superficies más
                                 amplias.</p>
@@ -1349,30 +1554,38 @@
                         </div>
                         <div class="cuidados" id="captura">
                             <h4>Método de Captura</h4>
-                            <p>Captura insectos utilizando trampas subacuáticas. Las Utricularias tienen pequeñas
+                            <p>Captura insectos utilizando trampas subacuáticas. Las Utricularias tienen
+                                pequeñas
                                 vejigas
-                                (utrículos) que funcionan como trampas de succión. Cuando una presa pequeña (como
+                                (utrículos) que funcionan como trampas de succión. Cuando una presa pequeña
+                                (como
                                 protozoos o
-                                pequeños insectos acuáticos) toca los pelos sensibles cerca de la apertura del utrículo,
+                                pequeños insectos acuáticos) toca los pelos sensibles cerca de la apertura del
+                                utrículo,
                                 la
-                                trampa se abre rápidamente, succionando al insecto junto con el agua circundante y luego
+                                trampa se abre rápidamente, succionando al insecto junto con el agua circundante
+                                y luego
                                 cerrándose. La presa es digerida lentamente en el interior de la trampa.</p>
                         </div>
 
                         <div class="cuidados" id="temperatura">
                             <h4>Temperatura</h4>
-                            <p>Prefieren un rango de temperatura entre 15°C y 30°C, dependiendo de la especie. La
+                            <p>Prefieren un rango de temperatura entre 15°C y 30°C, dependiendo de la especie.
+                                La
                                 mayoría de las
-                                Utricularias pueden tolerar un rango amplio de temperaturas, pero es importante evitar
+                                Utricularias pueden tolerar un rango amplio de temperaturas, pero es importante
+                                evitar
                                 extremos
-                                prolongados, especialmente heladas. Pueden tolerar entre 0°C y 40°C, pero cerca de estos
+                                prolongados, especialmente heladas. Pueden tolerar entre 0°C y 40°C, pero cerca
+                                de estos
                                 rangos
                                 es mejor protegerlas del calor y mantenerlas hidratadas.</p>
                         </div>
                         <div class="cuidados" id="humedad">
                             <article>
                                 <h4>Humedad</h4>
-                                <p>Dependiendo la planta , toleran una humedad del 50% al 90%, la necesidad de una
+                                <p>Dependiendo la planta , toleran una humedad del 50% al 90%, la necesidad de
+                                    una
                                     humedad alta se aplica a variedades tropicales . Variedades terrestres se
                                     desarrollan bien en humedades mas bajas
                                 </p>
@@ -1381,16 +1594,20 @@
                         <div class="cuidados" id="riego">
                             <article>
                                 <h4>Riego</h4>
-                                <p>Utilizar solo agua destilada o de lluvia, especialmente si están cultivadas en
+                                <p>Utilizar solo agua destilada o de lluvia, especialmente si están cultivadas
+                                    en
                                     macetas o
-                                    terrarios. Mantenerlas siempre húmedas o sumergidas en agua, dependiendo de la
+                                    terrarios. Mantenerlas siempre húmedas o sumergidas en agua, dependiendo de
+                                    la
                                     especie. En
                                     especies terrestres, pueden tener agua hasta el borde de la maceta.</p>
                                 <p>El riego cambia según la época del año:</p>
-                                <p>En Primavera/Verano: Mantener el entorno constantemente húmedo o acuático. Si se
+                                <p>En Primavera/Verano: Mantener el entorno constantemente húmedo o acuático. Si
+                                    se
                                     cultivan en
                                     sustrato, éste debe estar siempre húmedo.</p>
-                                <p>En Otoño/Invierno: Continuar con el riego regular, adaptando según la especie y su
+                                <p>En Otoño/Invierno: Continuar con el riego regular, adaptando según la especie
+                                    y su
                                     ritmo de
                                     crecimiento. No permitir que el sustrato o el entorno se seque.</p>
                             </article>
@@ -1399,9 +1616,11 @@
                         <div class="cuidados" id="floracion">
                             <article>
                                 <h4>Floración</h4>
-                                <p>Florecen abundantemente a lo largo del año, con picos en primavera y verano. Las
+                                <p>Florecen abundantemente a lo largo del año, con picos en primavera y verano.
+                                    Las
                                     flores son
-                                    generalmente pequeñas y pueden ser de diversos colores, dependiendo de la especie.
+                                    generalmente pequeñas y pueden ser de diversos colores, dependiendo de la
+                                    especie.
                                 </p>
                             </article>
                         </div>
@@ -1409,7 +1628,8 @@
                         <div class="cuidados" id="trasplantes">
                             <article>
                                 <h4>Trasplantes</h4>
-                                <p>Se pueden trasplantar en cualquier época del año, preferiblemente cuando la planta
+                                <p>Se pueden trasplantar en cualquier época del año, preferiblemente cuando la
+                                    planta
                                     muestra
                                     signos de haber llenado su maceta o espacio de cultivo.</p>
                             </article>
@@ -1418,10 +1638,12 @@
                         <div class="cuidados" id="iluminacion">
                             <article>
                                 <h4>Iluminación</h4>
-                                <p>En Exterior: Prefieren luz brillante pero indirecta. Algunas especies toleran algo de
+                                <p>En Exterior: Prefieren luz brillante pero indirecta. Algunas especies toleran
+                                    algo de
                                     sol
                                     directo leve, especialmente en climas más fríos.</p>
-                                <p>En Interior: Colocar junto a una ventana bien iluminada o bajo luz artificial. Pueden
+                                <p>En Interior: Colocar junto a una ventana bien iluminada o bajo luz
+                                    artificial. Pueden
                                     necesitar iluminación suplementaria para florecer abundantemente.</p>
                             </article>
                         </div>
@@ -1429,13 +1651,17 @@
                         <div class="cuidados" id="sustrato">
                             <article>
                                 <h4>Sustrato</h4>
-                                <p>Necesitan un sustrato pobre en nutrientes y generalmente ácido. Los sustratos más
+                                <p>Necesitan un sustrato pobre en nutrientes y generalmente ácido. Los sustratos
+                                    más
                                     comunes son
-                                    una mezcla de turba rubia y perlita, musgo de sphagnum y perlita, o arena de cuarzo.
+                                    una mezcla de turba rubia y perlita, musgo de sphagnum y perlita, o arena de
+                                    cuarzo.
                                     Las
-                                    proporciones pueden variar, pero suelen ser 50/50, 60/40 o 70/30, dependiendo de la
+                                    proporciones pueden variar, pero suelen ser 50/50, 60/40 o 70/30,
+                                    dependiendo de la
                                     especie
-                                    y sus necesidades específicas. En epífitas usar musgo y en terrestres turba.</p>
+                                    y sus necesidades específicas. En epífitas usar musgo y en terrestres turba.
+                                </p>
                             </article>
                         </div>
 
@@ -1448,8 +1674,10 @@
 
                         <div class="cuidados" id="alimentacion">
                             <h4>Alimentación</h4>
-                            <p>Se alimentan de pequeños organismos acuáticos que capturan en sus trampas. No requieren
-                                alimentación manual y pueden subsistir solo con lo que capturan en su entorno.</p>
+                            <p>Se alimentan de pequeños organismos acuáticos que capturan en sus trampas. No
+                                requieren
+                                alimentación manual y pueden subsistir solo con lo que capturan en su entorno.
+                            </p>
                         </div>
                     </div>
                     <div class="imagenesEspecie">
@@ -1472,38 +1700,83 @@
             </section>
 
             <!--Fin seccion-->
+
         </main>
+
         <!-- Footer-->
         <footer class="page-footer">
             <div class="container">
-              <div class="row">
-                <div class="col l6 s12">
-                  <h5 class="white-text">Footer Content</h5>
-                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                <div class="row">
+
+                    <article>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Contacto</h5>
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/PlantasCarnivorasBanfield">Facebook</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!"
+                                        >Instagram</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Whatshap</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div id="separador"></div>
+                        <div class="col l4 offset-l2 s12">
+                            <h5 class="white-text">Busca por especie</h5>
+
+                            <ul class="section table-of-contents">
+                                <li><a href="#brocchinia" onclick="guia('brocchinia')">Brochinia</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#dionaea" onclick="guia('dionaea')">Dionaea</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#drosera" onclick="guia('drosera')">Drosera</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#nepenthes" onclick="guia('nepenthes')">Nepenthes</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#pinguicula" onclick="guia('pinguicula')">Pinguicula</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#sarracenia" onclick="guia('sarracenia')">Sarracenia</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#stytlidium" onclick="guia('stylidium')">Stylidium</a></li>
+                                <li class="separador"></li>
+                                <li><a href="#utricularia" onclick="guia('utricularia')">Utricularia</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <div class="col l6 s12" id="recomendacion">
+                        <h5 class="white-text">¿ Tenes alguna recomendacion para la pagina ? </h5>
+                        <p class="grey-text text-lighten-4">Contactanos por cualquier medio y dejanos tu recomendacion
+                        </p>
+
+                    </div>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">Links</h5>
-                  <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('brocchinia')">Guia sobre Brocchinia</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('dionaea')">Guia sobre Dionaea</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('drosera')">Guia sobre Drosera</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('nepenthes')">Guia sobre Nepenthes </a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('pinguicula')">Guia sobre Pinguicula </a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('sarracenia')">Guia sobre Sarracenia </a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('stylidium')">Guia sobre Stylidium </a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!" onclick="guia('utricularia')">Guia sobre Uticularia </a></li>
-                  </ul>
-                </div>
-              </div>
             </div>
             <div class="footer-copyright">
-              <div class="container">
-              © 2014 Copyright Text
-              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-              </div>
+                <div class="container">
+                    © 2024 Copyright -Todos los derechos reservados
+                    <a class="grey-text text-lighten-4 right" href="#!">Creado por Matias Gonzalez</a>
+                </div>
             </div>
-          </footer>
+        </footer>
+        <header class="header2">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" data-target="slide-out-left" class="sidenav-trigger show-on-large">
+                            <i class="material-icons">menu</i></a>
+                    </li>
+                    <li><a href="index.html"><i class="material-icons">home</i></a></li>
+                    <li>
+                        <a href="#" data-target="slide-out-rigth" class="sidenav-trigger show-on-large">
+                            <i class="material-icons">arrow_upward</i></a>
+                    </li>
+
+
+                </ul>
+            </nav>
+        </header>
     </div>
+
     <!---->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
