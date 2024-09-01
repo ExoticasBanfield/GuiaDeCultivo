@@ -2,11 +2,11 @@
 
 ## Descripción
 
-La **Guía Básica de Cultivo de Plantas Carnívoras** es un proyecto diseñado para brindar información general sobre los cuidados necesarios para diversas especies de plantas carnívoras. Está dirigida a quienes deseen conocer cómo mantener estas plantas saludables y florecientes. El proyecto abarca consejos sobre riego, iluminación, sustrato, y otros aspectos esenciales del cultivo.
+La **Guía Básica de Cultivo de Plantas Carnívoras** es un proyecto diseñado para brindar información general sobre los cuidados necesarios para diversas especies de plantas carnívoras. Está dirigida a quienes deseen conocer cómo mantener estas plantas saludables . El proyecto abarca consejos sobre riego, iluminación, sustrato, y otros aspectos esenciales del cultivo.
 
 ## Objetivo
 
-El objetivo de este proyecto es educar y orientar a los entusiastas de las plantas carnívoras, ofreciendo una guía comprensible y accesible que cubra los cuidados generales para múltiples especies.
+El objetivo de este proyecto es educar,derribar mitos y orientar a los entusiastas de las plantas carnívoras, ofreciendo una guía comprensible y accesible que cubra los cuidados generales para múltiples especies.
 Este proyecto solo es el inicio y gradualmente se ira expandiendo a una guia mas especifica sobre cada variedad y especie en otro repositorio .
 
 ## Enfoque y Metodología
