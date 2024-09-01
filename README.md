@@ -1,7 +1,3 @@
-Aquí tienes el texto corregido y formateado para que lo puedas copiar y pegar en un README de GitHub:
-
----
-
 # Guía Básica de Cultivo de Plantas Carnívoras
 
 ## Descripción
@@ -37,6 +33,3 @@ Si tienes preguntas, sugerencias sobre el proyecto o buscas colaborar, no dudes 
 
 Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
----
-
-Puedes copiar y pegar este texto directamente en un archivo README.md en GitHub.
