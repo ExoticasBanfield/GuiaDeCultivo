@@ -81,7 +81,9 @@ color: var(--terciario);
 
 
 /*-----Ocultar secciones de especie--------*/
-.main #dionaea,
+.main 
+#brocchinia,
+#dionaea,
 #drosera,
 #stylidium,
 #sarracenia,
@@ -147,7 +149,7 @@ color: var(--terciario);
 /*------------Botones de especies de carousel--------*/
 .seccionPrincipal #carouselEspecies .carousel-item .especieButon {
     border-radius: 0.3em;
-    box-shadow: 0 0 0.5em #33691e;
+    box-shadow: 0 0 0.5em var(--secundario);
     border: 2px solid var(--primario);
     width: 100%;
     height: 100%;
@@ -368,8 +370,11 @@ color: var(--terciario);
     font-size: 2.5em;
 }
 .contenedor .page-footer .footer-copyright .container{
+    display: flex;
+    flex-wrap: wrap;
     font-size: 2em;
     width: 100%;
+    justify-content: space-around;
 }
 /**/
 /*---------   Header2 ---------*/
@@ -420,7 +425,7 @@ justify-content: space-around;
 }
 /**/
     .contenedor .header {
-        border: 2px solid violet;
+        
         height: 80px;
     }
     .contenedor .header nav{
@@ -464,8 +469,8 @@ justify-content: space-around;
 }
 /*-------------------     Footer: contenedor/page-footer  ----------------------*/
 .contenedor .page-footer{
-    background-color: var(--primario
-    );
+    background-color: var(--primario);
+    margin-bottom: 7em;
 }
 /*---------------article links---------*/
 .contenedor .page-footer .container article {
