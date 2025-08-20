@@ -80,6 +80,14 @@
   }
 
 /****************************************************************** */
+ 
+main #cuidados-generales .container .row .col .card-panel {   
+    height: 300px;   
+ }
 
-
+@media(max-width:600px){
+    main #cuidados-generales .container .row .col .card-panel {
+        height: auto;
+     }
+}
 

@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
   cargarComponente("header", `${basePath}/componentes/header.html`, () => {
     document.querySelectorAll(".header a").forEach(a => {
       let href = a.getAttribute("href");
-      
+
       // Solo modificar si apunta a un HTML de género
       if (!href.startsWith("#") && !href.startsWith("https")) { // Evitar enlaces internos
         if (isInGeneroFolder) {
-          if(href.toLocaleLowerCase()=="index.html"){
-            href=href.replace(href,`${basePath}/${href}`);
-          }else{
-          // Si ya estamos en /genero/, dejar solo el archivo
-          href = href;
+          if (href.toLocaleLowerCase() == "index.html") {
+            href = href.replace(href, `${basePath}/${href}`);
+          } else {
+            // Si ya estamos en /genero/, dejar solo el archivo
+            href = href;
           }
         } else {
           // Si estamos en index u otra carpeta, asegurar que apunte a /genero/
@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
         a.setAttribute("href", href);
       }
     });
-    document.querySelectorAll(".responsive-img").forEach(img => {
+    document.querySelectorAll("header img").forEach(img => {
       let src = img.getAttribute("src");
       if (isInGeneroFolder) {
-        if(src!=null){
-        src =src.replace(src,`${basePath}/${src}`);
-        img.setAttribute("src", src);
-      }
+        if (src != null) {         
+          src = src.replace(src, `${basePath}/${src}`);
+          img.setAttribute("src", src);
+        }
       }
     });
     // Ajustar enlaces del menú de géneros
@@ -56,8 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let src = img.getAttribute("src");
       if (isInGeneroFolder) {
-        src = `${basePath}/${src}`;
-        img.setAttribute("src", src);
+        if (src != null) {
+          src = src.replace(src,`${basePath}/${src}`);
+          img.setAttribute("src", src); 
+        }
+
       }
     });
 
@@ -86,10 +89,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // Solo modificar si apunta a un HTML de género
       if (!href.startsWith("#") && !href.startsWith("https")) { // Evitar enlaces internos
         if (isInGeneroFolder) {
-          
+
           // Si ya estamos en /genero/, dejar solo el archivo
           href = href.replace("genero/", "");
-          
+
         } else {
           // Si estamos en index u otra carpeta, asegurar que apunte a /genero/
           if (!href.startsWith("genero/")) {
@@ -142,17 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-
-  });
-  //
-  var elems = document.querySelectorAll('.carousel');
-  M.Carousel.init(elems, {
-    fullWidth: false,
-    numVisible: 7,
-    dist: 0,
-    nowrap: false,
-    shift: 0,
-    padding: 0
   });
 
 });
