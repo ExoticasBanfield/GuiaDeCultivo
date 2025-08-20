@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # GuiaDeCultivo
-=======
 # Guía Básica de Cultivo de Plantas Carnívoras
 
 ## Descripción
@@ -19,7 +17,7 @@ Esta guía se basa en la experiencia personal del autor, adquirida a lo largo de
 
 ## Derechos de Autor
 
-Todo el contenido de esta guía, incluyendo las fotografías, está protegido por derechos de autor. Las imágenes utilizadas son personales y pertenecen a plantas cultivadas por el autor. No está permitido utilizar, reproducir, o distribuir este material sin el consentimiento previo del autor.
+Todo el contenido de esta guía, incluyendo las fotografías(con excepcion de iconos), está protegido por derechos de autor. Las imágenes utilizadas son personales y pertenecen a plantas cultivadas por el autor. No está permitido utilizar, reproducir, o distribuir este material sin el consentimiento previo del autor.
 
 ## Contribuciones
 
@@ -33,4 +31,3 @@ Si tienes preguntas, sugerencias sobre el proyecto o buscas colaborar, no dudes 
 
 Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
->>>>>>> rama-temporal
