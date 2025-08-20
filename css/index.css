@@ -1,0 +1,85 @@
+:root {
+    /*Paleta de materialize
+    #1b5e20 green darken-3 -nav */
+    --primario: #33691e;
+    --secundario: #bcf46c;
+    --terciario: #f8f9fa;
+}
+
+
+
+/*---- fin -----*/
+/*-----------CAROUSEL ESPECIES ----------------*/
+.seccionPrincipal #carouselEspecies {
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 0em;
+    overflow: hidden;
+
+}
+
+/*----------- .carousel-item ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item {
+    height: 100%;
+    width: 180px;
+    padding: 0.5em;
+}
+
+/*------------Botones de especies de carousel--------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon {
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.5em var(--secundario);
+    border: 2px solid var(--primario);
+    width: 100%;
+    height: 100%;
+    padding: 0em;
+}
+
+/*----------- div ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 0.2em;
+}
+
+/*----------- img ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon img {
+    height: 79%;
+    width: 100%;
+    background-color: white;
+}
+
+/*----------- p : texto del boton ----------------*/
+.seccionPrincipal #carouselEspecies .carousel-item .especieButon div p {
+    width: 100%;
+    height: auto;
+    background-color:var(--secundario);
+    border-radius: 0.2em;
+    padding-top: 0em;
+    padding-bottom: 0.18em;
+    margin: 0;
+    margin-top: -0.1em;
+    font-size: 1em;
+    font-size: 1.9em;
+}
+
+/*seccion de card-generos*/
+#card-generos .card-content h5{
+    color: var(--hover);
+
+}
+#card-generos a {
+  color: var(--primario);
+}
+#card-generos a:hover {
+    color: red;
+  }
+
+/****************************************************************** */
+
+
+

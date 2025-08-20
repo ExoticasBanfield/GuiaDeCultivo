@@ -1,0 +1,27 @@
+principal
+#1B5E20 green darken-3  para header / footer / botones / titulos importantes
+*************************
+secundario
+
+>> #F9FBE7 lime lighten-5  fondo suave para secciones principales
+
+>> #C8E6C9 green lighten-4 para fondos suaves como card /tablas
+
+>> #B2DFDB teal lighten-4 para zonas informativas o tarjetas
+**********************
+colores con acento
+#FFD740 amber accent-3 para botones secundarios/alertas suaves
+#FF5252 red accent-2 para hover a /errores/advertencias/resaltar texto importante 
+#76FF03 light-green accent-3 acento fresco y vivo
+********************* 
+texto y fondo
+principal > blanco #FFFFFF o grey lighten-5 #FAFAFA
+
+texto >
+...principal >#212121 grey darken-4 o 3
+...secundario > #616161 grey darken-1
+
+fondo >  lime lighten-5
+card > #C8E6C9 green lighten-4 
+titulo card > green-text text-darken-3
+texto card > grey-text text-darken-4
