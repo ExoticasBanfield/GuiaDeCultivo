@@ -1,0 +1,62 @@
+:root {
+    /*Paleta de materialize
+    #1b5e20 green darken-3 -nav */
+    --primario: #33691e;
+    --secundario: #bcf46c;
+    --terciario: #f8f9fa;
+    --hover:#FF5252;
+}
+/*------------Barra izquierda--------------*/
+#slide-out-left img{
+    width: 150px;
+    height: auto;
+}
+#slide-out-left li a{
+    color: var(--primario);
+}
+#slide-out-left .links a:hover{
+    position: relative;
+    transform: translate(8px);
+    transition: 300ms;
+    bottom: 3px;
+    color: var(--hover);
+}
+#slide-out-left .icono a i{
+    color: var(--hover);
+}
+#slide-out-left .icono a i:hover{
+    color: var(--primario);
+}
+
+/*------------Barra derecha--------------*/
+
+#slide-out-rigth li h5 {
+    color: var(--primario);
+}
+#slide-out-rigth li a{
+    color: var(--primario);
+}
+#slide-out-rigth .links-generos a:hover{
+    position: relative;
+    transform: translate(6px);
+    transition: 200ms;
+    bottom: 3px;
+    color: var(--hover);
+}
+#slide-out-rigth .icono a i{
+    color: var(--hover);
+}
+#slide-out-rigth .icono a i:hover{
+    color: var(--primario);
+}
+/**/
+.header ul a:hover{
+    color: var(--hover);
+}
+
+
+@media(max-width:600px){
+    .sidenav{
+        max-height: 95%;
+    }
+}

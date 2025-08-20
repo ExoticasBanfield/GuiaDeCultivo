@@ -1,0 +1,24 @@
+:root {
+    /*Paleta de materialize
+    #1b5e20 green darken-3 -nav */
+    --primario: #33691e;
+    --secundario: #bcf46c;
+    --terciario: #f8f9fa;
+    --hover:#FF5252;
+    
+
+}
+#footer a{
+    color: var(--secundario);
+}
+#footer a:active{
+    color: var(--primario);
+}
+#footer a:hover{
+    color: var(--hover); 
+}
+@media (max-width:600px) {
+    #footer{
+        margin-bottom: 9vw;
+      }
+} 
