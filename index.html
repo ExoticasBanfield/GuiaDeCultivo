@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="theme-color" content="#2a7f4f">
     <title>Guia de Cultivo de Plantas Carnivoras | Exoticas Banfield</title>
-    <!--
-    <link rel="icon" href="Imagenes/iconos/eb_ico.ico">
-    -->
-    <link rel="icon" href="Imagenes/logo/Logo2-ExoticasBanfield.png">
-
+    <!-- FAVICON -->
+    <link rel="icon" href="Imagenes/iconos/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="Imagenes/iconos/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Imagenes/iconos/favicon/favicon-32x32.png">
+    <!-- Iconos grandes -->
+    <link rel="icon" type="image/png" sizes="196x196" href="Imagenes/iconos/favicon/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="Imagenes/iconos/favicon/favicon-512x512.png">
+    <!-- Apple / iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Imagenes/iconos/favicon/apple-touch-icon.png">
     <!-- SEO básico -->
     <meta name="author" content="Exóticas Banfield - Matias Gonzalez" />
     <meta name="robots" content="index, follow" />
@@ -43,9 +47,8 @@
 
 
     <!-- Otros -->
-
-    <meta property="og:locale" content="es_ES" />
-
+    <meta property="og:locale" content="es_AR" />
+    <!-- CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/index.css">
@@ -65,6 +68,10 @@
   "image": "https://exoticasbanfield.github.io/GuiaDeCultivo/Imagenes/portadas/og-image-1200x630.png",
   "inLanguage": "es-AR",
   "author": {
+    "@type": "Organization",
+    "name": "Exóticas Banfield"
+  },
+  "publisher": {
     "@type": "Organization",
     "name": "Exóticas Banfield"
   }
@@ -88,64 +95,58 @@
         <!---->
         <main class="main">
             <div class="titulo section center green-text text-darken-3">
-                <h1>Guia de Cultivo basica de Plantas Carnivoras</h1>
-                <h5>Busca sus cuidados basicos por genero</h5>
+                <h1>Guía de Cultivo Básica de Plantas Carnívoras</h1>
+                <h5>Buscá sus cuidados básicos por género</h5>
             </div>
 
             <!--Seccion con botones carousel -->
             <section class="seccionPrincipal">
 
                 <div class="carousel " id="carouselEspecies">
-                    <a class="carousel-item" href="#one!"><button onclick="guia('brocchinia')" class="especieButon"
-                            id="butonEspecie">
+                    <a class="carousel-item" href="#one!"><button onclick="guia('brocchinia')" class="especieButon">
                             <div><img src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="">
                                 <p>Brocchinia</p>
                             </div>
                         </button></a>
-                    <a class="carousel-item" href="#two!"><button onclick="guia('dionaea')" class="especieButon"
-                            id="butonEspecie">
+                    <a class="carousel-item" href="#two!"><button onclick="guia('dionaea')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/venus.png" alt="">
                                 <p>Dionaea</p>
                             </div>
                         </button></a>
                     <a class="carousel-item" href="#three!">
-                        <button onclick="guia('drosera')" class="especieButon" id="butonEspecie">
+                        <button onclick="guia('drosera')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/drosera.png" alt="">
                                 <p>Drosera</p>
                             </div>
                         </button>
                     </a>
                     <a class="carousel-item" href="#four!">
-                        <button onclick="guia('nepenthes')" class="especieButon" id="butonEspecie">
+                        <button onclick="guia('nepenthes')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/nepenthes.png" alt="">
                                 <p>Nepenthes</p>
                             </div>
                         </button>
                     </a>
-                    <a class="carousel-item" href="#five!"><button onclick="guia('pinguicula')" class="especieButon"
-                            id="butonEspecie">
+                    <a class="carousel-item" href="#five!"><button onclick="guia('pinguicula')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/pinguicula.png" alt="">
                                 <p>Pinguicula</p>
                             </div>
                         </button></a>
-                    <a class="carousel-item" href="#five!"><button onclick="guia('sarracenia')" class="especieButon"
-                            id="butonEspecie">
+                    <a class="carousel-item" href="#five!"><button onclick="guia('sarracenia')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/sarracenia.png" alt="">
                                 <p>Sarracenia</p>
                             </div>
                         </button></a>
-                    <a class="carousel-item" href="#five!"><button onclick="guia('stylidium')" class="especieButon"
-                            id="butonEspecie">
+                    <a class="carousel-item" href="#five!"><button onclick="guia('stylidium')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/stylidium.png" alt="">
                                 <p>Stylidium</p>
                             </div>
                         </button></a>
-                    <a class="carousel-item" href="#five!"><button onclick="guia('utricularia')" class="especieButon"
-                            id="butonEspecie">
+                    <a class="carousel-item" href="#five!"><button onclick="guia('utricularia')" class="especieButon">
                             <div><img src="Imagenes/iconos/plantas/utricularia.png" alt="">
                                 <p>Utricularia</p>
                             </div>
-                        </button>></a>
+                        </button></a>
                 </div>
             </section>
             <!---->
@@ -231,8 +232,8 @@
                         <div class="card horizontal hoverable ">
                             <div class="card-image">
                                 <img class="circle responsive-img"
-                                    src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg" alt="Brocchinia"
-                                    style="width: 150px; height: 150px; margin: 10px;">
+                                    src="Imagenes/Plantas/brocchinia/brocchinia_hectchioides.jpg"
+                                    alt="Brocchinia hetchioides" style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -254,7 +255,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-image">
                                 <img class="circle responsive-img" src="Imagenes/iconos/plantas/drosera.png"
-                                    alt="Brocchinia" style="width: 150px; height: 150px; margin: 10px;">
+                                    alt="Drosera " style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -274,7 +275,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-image">
                                 <img class="circle responsive-img" src="Imagenes/iconos/plantas/venus.png"
-                                    alt="Brocchinia" style="width: 150px; height: 150px; margin: 10px;">
+                                    alt="Dionaea muscipula" style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -286,7 +287,7 @@
                                     </p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="genero/dionaea-muscipula-guia-basica.html">Ver más sobre Dionaea...</a>
+                                    <a href="genero/dionaea-guia-basica.html">Ver más sobre Dionaea...</a>
                                 </div>
                             </div>
                     </section>
@@ -296,7 +297,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-image">
                                 <img class="circle responsive-img" src="Imagenes/iconos/plantas/pinguicula.png"
-                                    alt="Brocchinia" style="width: 150px; height: 150px; margin: 10px;">
+                                    alt="Pinguicula" style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -320,7 +321,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-image">
                                 <img class="circle responsive-img" src="Imagenes/iconos/plantas/sarracenia.png"
-                                    alt="Brocchinia" style="width: 150px; height: 150px; margin: 10px;">
+                                    alt="Jarro de sarracenia" style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -333,7 +334,7 @@
                                     </p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="genero/brocchinia-guia-basica.html">Ver más sobre Drosera...</a>
+                                    <a href="genero/sarracenia-guia-basica.html">Ver más sobre Sarracenia...</a>
                                 </div>
                             </div>
                     </section>
@@ -343,7 +344,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-image">
                                 <img class="circle responsive-img" src="Imagenes/iconos/plantas/nepenthes.png"
-                                    alt="Brocchinia" style="width: 150px; height: 150px; margin: 10px;">
+                                    alt="Jarro de nepenthes " style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -355,7 +356,7 @@
                                     </p>
                                 </div>
                                 <div class="card-action">
-                                    <a href="genero/brocchinia-guia-basica.html">Ver más sobre Drosera...</a>
+                                    <a href="genero/nepenthes-guia-basica.html">Ver más sobre Nepenthes...</a>
                                 </div>
                             </div>
                     </section>
@@ -365,7 +366,7 @@
                         <div class="card horizontal hoverable">
                             <div class="card-image">
                                 <img class="circle responsive-img" src="Imagenes/iconos/plantas/stylidium.png"
-                                    alt="Brocchinia" style="width: 150px; height: 150px; margin: 10px;">
+                                    alt="stylidium" style="width: 150px; height: 150px; margin: 10px;">
                             </div>
                             <div class="card-stacked">
                                 <div class="card-content">
